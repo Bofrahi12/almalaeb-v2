@@ -31,6 +31,7 @@
     box.innerHTML = html;
   }
   document.addEventListener("DOMContentLoaded", async function () {
+    await window.loadLogos();
     FX = await window.MalaebData.fixtures();
     render();
     document.querySelectorAll(".tabs button").forEach(btn => {

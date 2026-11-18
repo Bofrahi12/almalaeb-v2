@@ -35,6 +35,36 @@
     }
   };
 
+  /* الشعارات: ملفات محلية من data/logos.json — فريق بلا شعار يظهر نصاً فقط */
+  window.MalaebLogos = { leagues: {}, byAr: {}, ready: false, promise: null };
+  window.loadLogos = function () {
+    if (window.MalaebLogos.promise) return window.MalaebLogos.promise;
+    window.MalaebLogos.promise = (async function () {
+      try {
+        const d = await loadJSON("data/logos.json");
+        if (d) {
+          window.MalaebLogos.leagues = d.leagues || {};
+          (d.clubs || []).forEach(c => { window.MalaebLogos.byAr[c.ar] = c.file; });
+        }
+      } catch (e) {}
+      window.MalaebLogos.ready = true;
+      return window.MalaebLogos;
+    })();
+    return window.MalaebLogos.promise;
+  };
+  window.logoFor = function (teamName) {
+    if (!teamName || teamName === "—") return "";
+    const f = window.MalaebLogos.byAr[teamName];
+    if (!f) return "";
+    const esc = String(teamName).replace(/"/g, "&quot;");
+    return `<img class="team-logo" src="${f}" alt="شعار ${esc}" loading="lazy" onerror="this.remove()">`;
+  };
+  window.leagueLogoFor = function (leagueId) {
+    const f = window.MalaebLogos.leagues[leagueId];
+    if (!f) return "";
+    return `<img class="league-logo" src="${f}" alt="شعار الدوري" loading="lazy" onerror="this.remove()">`;
+  };
+
   document.addEventListener("DOMContentLoaded", function () {
     const btn = document.querySelector(".menu-btn");
     const nav = document.querySelector(".main-nav");
@@ -72,7 +102,9 @@
     onlyAllowed(fx.upcoming || []).slice(0, 8).forEach(m => {
       items.push(`<span class="ticker-item">${m.home} × ${m.away} <b>${m.date_label || m.date} ${m.time || ""}</b></span>`);
     });
-    el.innerHTML = items.join("") || "<span class='ticker-item'>لا توجد مباريات مبرمجة في الدوريات الستة حالياً</span>";
+    const liveCount = onlyAllowed(fx.live || []).length;
+    const head = liveCount ? "" : "<span class='ticker-item'>لا مباريات مباشرة الآن — القادمة:</span>";
+    el.innerHTML = head + (items.join("") || "<span class='ticker-item'>لا توجد مباريات مبرمجة في الدوريات الستة حالياً</span>");
   };
 
   window.posClass = function (pos, leagueId) {
@@ -94,7 +126,7 @@
     const rows = (limit ? league.table.slice(0, limit) : league.table).map(r => {
       if (r.placeholder) return `<tr><td>${r.pos}</td><td class="team" style="color:var(--muted)">${r.team}</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td><b>—</b></td></tr>`;
       return `<tr class="${window.posClass(r.pos, league.id)}">
-        <td>${r.pos}</td><td class="team">${r.team}</td><td>${cell(r.p)}</td>
+        <td>${r.pos}</td><td class="team">${window.logoFor(r.team)}${r.team}</td><td>${cell(r.p)}</td>
         <td>${cell(r.w)}</td><td>${cell(r.d)}</td><td>${cell(r.l)}</td>
         <td>${gdTxt(r)}</td><td><b>${cell(r.pts)}</b></td></tr>`;
     }).join("");
@@ -109,12 +141,17 @@
     const score = isLive || isFin
       ? `<span class="score${isLive ? " live" : ""}">${m.home_goals} - ${m.away_goals}</span>`
       : `<span class="score">${m.time || "—"}</span>`;
+    const badge = isLive
+      ? `<span class="status-badge live">● مباشر ${m.minute || ""}'</span>`
+      : isFin
+        ? `<span class="status-badge finished">انتهت</span>`
+        : `<span class="status-badge upcoming">لم تبدأ بعد</span>`;
     const time = isLive
-      ? `<span class="time"><span class="live-dot">● مباشر</span> ${m.minute}'</span>`
+      ? `<span class="time">${m.minute || ""}'</span>`
       : `<span class="time">${m.date_label || m.date || ""} ${m.time || ""}</span>`;
     const inner = `<div class="match-row">
-      <span class="lg">${m.league_name || ""}</span>
-      <span class="team">${m.home}</span>${score}<span class="team away">${m.away}</span>${time}
+      <span class="lg">${m.league_name || ""}${badge}</span>
+      <span class="team">${window.logoFor(m.home)}${m.home}</span>${score}<span class="team away">${window.logoFor(m.away)}${m.away}</span>${time}
     </div>`;
     return m.id ? `<a class="match-link" href="match.html?id=${m.id}">${inner}</a>` : inner;
   };

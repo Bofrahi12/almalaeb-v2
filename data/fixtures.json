@@ -14,7 +14,9 @@
       "date": "2026-11-20",
       "time": "20:30",
       "status": "scheduled",
-      "source": "kickofflens.com + football.mib.news (19:30 UTC)"
+      "source": "kickofflens.com + football.mib.news (19:30 UTC)",
+      "venue": "أليانز أرينا، ميونيخ",
+      "channel": "beIN Sports"
     },
     {
       "id": "athletic-espanyol-2026-11-20",
@@ -25,7 +27,9 @@
       "date": "2026-11-20",
       "time": "21:00",
       "status": "scheduled",
-      "source": "kickofflens.com + football.mib.news (20:00 UTC)"
+      "source": "kickofflens.com + football.mib.news (20:00 UTC)",
+      "venue": "سان ماميس، بلباو",
+      "channel": "beIN Sports"
     },
     {
       "id": "troyes-lehavre-2026-11-20",
@@ -36,7 +40,9 @@
       "date": "2026-11-20",
       "time": "20:45",
       "status": "scheduled",
-      "source": "vavel.com (14:45 ET = 19:45 UTC) + football.mib.news"
+      "source": "vavel.com (14:45 ET = 19:45 UTC) + football.mib.news",
+      "venue": "ملعب لوب، تروا",
+      "channel": "beIN Sports"
     },
     {
       "id": "man-city-fulham-2026-11-21",
@@ -47,7 +53,9 @@
       "date": "2026-11-21",
       "time": "13:30",
       "status": "scheduled",
-      "source": "premierleague.com + nbcsports.com (12:30 UK)"
+      "source": "premierleague.com + nbcsports.com (12:30 UK)",
+      "venue": "ملعب الاتحاد، مانشستر",
+      "channel": "beIN Sports"
     },
     {
       "id": "aston-villa-sunderland-2026-11-21",
@@ -58,7 +66,9 @@
       "date": "2026-11-21",
       "time": "16:00",
       "status": "scheduled",
-      "source": "premierleague.com (15:00 UK)"
+      "source": "premierleague.com (15:00 UK)",
+      "venue": "فيلا بارك، برمنغهام",
+      "channel": "beIN Sports"
     },
     {
       "id": "bournemouth-nottingham-2026-11-21",
@@ -69,7 +79,9 @@
       "date": "2026-11-21",
       "time": "16:00",
       "status": "scheduled",
-      "source": "premierleague.com (15:00 UK)"
+      "source": "premierleague.com (15:00 UK)",
+      "venue": "فيتاليتي ستاديوم، بورنموث",
+      "channel": "beIN Sports"
     },
     {
       "id": "coventry-crystal-palace-2026-11-21",
@@ -80,7 +92,9 @@
       "date": "2026-11-21",
       "time": "16:00",
       "status": "scheduled",
-      "source": "livescore.in + premierleague.com (15:00 UK)"
+      "source": "livescore.in + premierleague.com (15:00 UK)",
+      "venue": "كوفنتري بيلدينغ سوسايتي أرينا، كوفنتري",
+      "channel": "beIN Sports"
     },
     {
       "id": "tottenham-ipswich-2026-11-21",
@@ -91,7 +105,9 @@
       "date": "2026-11-21",
       "time": "16:00",
       "status": "scheduled",
-      "source": "livescore.in + premierleague.com (15:00 UK)"
+      "source": "livescore.in + premierleague.com (15:00 UK)",
+      "venue": "ملعب توتنهام هوتسبير، لندن",
+      "channel": "beIN Sports"
     },
     {
       "id": "newcastle-arsenal-2026-11-21",
@@ -102,7 +118,10 @@
       "date": "2026-11-21",
       "time": "18:30",
       "status": "scheduled",
-      "source": "premierleague.com + nbcsports.com (17:30 UK)"
+      "source": "premierleague.com + nbcsports.com (17:30 UK)",
+      "venue": "سانت جيمس بارك، نيوكاسل",
+      "channel": "beIN Sports",
+      "referee": "كريس كافانا"
     },
     {
       "id": "real-madrid-celta-2026-11-21",
@@ -113,7 +132,9 @@
       "date": "2026-11-21",
       "time": null,
       "status": "scheduled",
-      "source": "laligatable.co (المباراة المقبلة لريال مدريد — التوقيت قيد التأكيد)"
+      "source": "laligatable.co (المباراة المقبلة لريال مدريد — التوقيت قيد التأكيد)",
+      "venue": "سانتياغو برنابيو، مدريد",
+      "channel": "beIN Sports"
     },
     {
       "id": "union-leipzig-2026-11-21",
@@ -124,7 +145,9 @@
       "date": "2026-11-21",
       "time": "15:30",
       "status": "scheduled",
-      "source": "fcstats.com (09:30 ET = 15:30 CET)"
+      "source": "fcstats.com (09:30 ET = 15:30 CET)",
+      "venue": "ملعب آلته فورستيري، برلين",
+      "channel": "beIN Sports"
     },
     {
       "id": "leverkusen-paderborn-2026-11-21",
@@ -135,7 +158,9 @@
       "date": "2026-11-21",
       "time": "15:30",
       "status": "scheduled",
-      "source": "fcstats.com (09:30 ET = 15:30 CET)"
+      "source": "fcstats.com (09:30 ET = 15:30 CET)",
+      "venue": "باي أرينا، ليفركوزن",
+      "channel": "beIN Sports"
     },
     {
       "id": "gladbach-dortmund-2026-11-21",
@@ -146,7 +171,9 @@
       "date": "2026-11-21",
       "time": "15:30",
       "status": "scheduled",
-      "source": "fcstats.com (09:30 ET = 15:30 CET)"
+      "source": "fcstats.com (09:30 ET = 15:30 CET)",
+      "venue": "بوروسيا بارك، مونشنغلادباخ",
+      "channel": "beIN Sports"
     },
     {
       "id": "augsburg-mainz-2026-11-21",
@@ -157,7 +184,9 @@
       "date": "2026-11-21",
       "time": "15:30",
       "status": "scheduled",
-      "source": "fcstats.com (09:30 ET = 15:30 CET)"
+      "source": "fcstats.com (09:30 ET = 15:30 CET)",
+      "venue": "ملعب WWK، أوغسبورغ",
+      "channel": "beIN Sports"
     },
     {
       "id": "nice-psg-2026-11-21",
@@ -168,7 +197,9 @@
       "date": "2026-11-21",
       "time": "17:15",
       "status": "scheduled",
-      "source": "vavel.com (11:15 ET = 16:15 UTC)"
+      "source": "vavel.com (11:15 ET = 16:15 UTC)",
+      "venue": "أليانز ريفييرا، نيس",
+      "channel": "beIN Sports"
     },
     {
       "id": "lille-lyon-2026-11-21",
@@ -179,7 +210,9 @@
       "date": "2026-11-21",
       "time": "20:45",
       "status": "scheduled",
-      "source": "vavel.com (14:45 ET = 19:45 UTC)"
+      "source": "vavel.com (14:45 ET = 19:45 UTC)",
+      "venue": "ملعب بيير موروا، ليل",
+      "channel": "beIN Sports"
     },
     {
       "id": "hull-brighton-2026-11-22",
@@ -190,7 +223,9 @@
       "date": "2026-11-22",
       "time": "15:00",
       "status": "scheduled",
-      "source": "livescore.in (06:00 PT = 14:00 UTC)"
+      "source": "livescore.in (06:00 PT = 14:00 UTC)",
+      "venue": "ملعب MKM، هال",
+      "channel": "beIN Sports"
     },
     {
       "id": "liverpool-manutd-2026-11-22",
@@ -201,7 +236,9 @@
       "date": "2026-11-22",
       "time": "18:30",
       "status": "scheduled",
-      "source": "premierleague.com + nbcsports.com (16:30 UK)"
+      "source": "premierleague.com + nbcsports.com (16:30 UK)",
+      "venue": "أنفيلد، ليفربول",
+      "channel": "beIN Sports"
     },
     {
       "id": "barcelona-villarreal-2026-11-22",
@@ -212,7 +249,9 @@
       "date": "2026-11-22",
       "time": null,
       "status": "scheduled",
-      "source": "laligatable.co (المباراة المقبلة لبرشلونة — التوقيت قيد التأكيد)"
+      "source": "laligatable.co (المباراة المقبلة لبرشلونة — التوقيت قيد التأكيد)",
+      "venue_note": "قيد التحقق — كامب نو أو ملعب لويس كومبانيس الأولمبي (مونتجويك)",
+      "channel": "beIN Sports"
     },
     {
       "id": "atalanta-inter-2026-11-22",
@@ -224,7 +263,9 @@
       "time": null,
       "status": "scheduled",
       "source": "showupandplay.com (عطلة نهاية الأسبوع 21–23 نونبر — اليوم الدقيق قيد التأكيد)",
-      "date_label": "21–23 نونبر 2026"
+      "date_label": "21–23 نونبر 2026",
+      "venue": "ملعب غيويس، بيرغامو",
+      "channel": "beIN Sports"
     },
     {
       "id": "juventus-venezia-2026-11-22",
@@ -236,7 +277,9 @@
       "time": null,
       "status": "scheduled",
       "source": "منشور فيسبوك FAFG (عطلة نهاية الأسبوع 21–23 نونبر — اليوم الدقيق قيد التأكيد)",
-      "date_label": "21–23 نونبر 2026"
+      "date_label": "21–23 نونبر 2026",
+      "venue": "أليانز ستاديوم، تورينو",
+      "channel": "beIN Sports"
     },
     {
       "id": "brentford-everton-2026-11-23",
@@ -247,7 +290,9 @@
       "date": "2026-11-23",
       "time": "21:00",
       "status": "scheduled",
-      "source": "livescore.in (12:00 PT = 20:00 UTC)"
+      "source": "livescore.in (12:00 PT = 20:00 UTC)",
+      "venue": "ملعب جيتك كوميونيتي، لندن",
+      "channel": "beIN Sports"
     }
   ],
   "results": [
@@ -261,7 +306,20 @@
       "league_name": "الدوري الألماني",
       "date": "2026-11-08",
       "status": "finished",
-      "source": "showupandplay.com (تقرير 08 نونبر 2026)"
+      "source": "showupandplay.com (تقرير 08 نونبر 2026)",
+      "stats": {
+        "possession_home": 31,
+        "possession_away": 69,
+        "shots_home": 11,
+        "shots_away": 26,
+        "shots_on_target_home": 1,
+        "shots_on_target_away": 9,
+        "corners_home": 7,
+        "corners_away": 8,
+        "source": "previaxi.com + soccerpunter.com + sportmeridian.com (18 نونبر 2026) — لعبت 07 نونبر 2026 14:30 UTC"
+      },
+      "venue": "ملعب ميوا، ماينز",
+      "channel": "beIN Sports"
     },
     {
       "id": "dortmund-elversberg-2026-11-08",
@@ -273,7 +331,20 @@
       "league_name": "الدوري الألماني",
       "date": "2026-11-08",
       "status": "finished",
-      "source": "showupandplay.com (تقرير 08 نونبر 2026)"
+      "source": "showupandplay.com (تقرير 08 نونبر 2026)",
+      "stats": {
+        "possession_home": 51,
+        "possession_away": 49,
+        "shots_home": 19,
+        "shots_away": 16,
+        "shots_on_target_home": 6,
+        "shots_on_target_away": 7,
+        "corners_home": 6,
+        "corners_away": 6,
+        "source": "soccerpunter.com + matchreplays.com + sportmeridian.com (18 نونبر 2026) — لعبت 07 نونبر 2026 14:30 UTC"
+      },
+      "venue": "سيغنال إيدونا بارك، دورتموند",
+      "channel": "beIN Sports"
     },
     {
       "id": "napoli-lazio-2026-11-08",
@@ -285,7 +356,20 @@
       "league_name": "الدوري الإيطالي",
       "date": "2026-11-08",
       "status": "finished",
-      "source": "showupandplay.com (تقرير 08 نونبر 2026)"
+      "source": "showupandplay.com (تقرير 08 نونبر 2026)",
+      "stats": {
+        "possession_home": 49,
+        "possession_away": 51,
+        "shots_home": 15,
+        "shots_away": 15,
+        "shots_on_target_home": 6,
+        "shots_on_target_away": 6,
+        "corners_home": 6,
+        "corners_away": 6,
+        "source": "skysports.com + moneyball-odds.com + yardbarker.com (18 نونبر 2026)"
+      },
+      "venue": "ملعب دييغو أرماندو مارادونا، نابولي",
+      "channel": "beIN Sports"
     },
     {
       "id": "inter-como-2026-11-08",
@@ -297,7 +381,20 @@
       "league_name": "الدوري الإيطالي",
       "date": "2026-11-08",
       "status": "finished",
-      "source": "showupandplay.com (تقرير 08 نونبر 2026)"
+      "source": "showupandplay.com (تقرير 08 نونبر 2026)",
+      "stats": {
+        "possession_home": 43,
+        "possession_away": 57,
+        "shots_home": 14,
+        "shots_away": 5,
+        "shots_on_target_home": 4,
+        "shots_on_target_away": 1,
+        "corners_home": 4,
+        "corners_away": 2,
+        "source": "skysports.com + pitchlabstats.com + moneyball-odds.com (18 نونبر 2026)"
+      },
+      "venue": "سان سيرو، ميلانو",
+      "channel": "beIN Sports"
     },
     {
       "id": "roma-sassuolo-2026-11-08",
@@ -309,7 +406,20 @@
       "league_name": "الدوري الإيطالي",
       "date": "2026-11-08",
       "status": "finished",
-      "source": "showupandplay.com (تقرير 08 نونبر 2026)"
+      "source": "showupandplay.com (تقرير 08 نونبر 2026)",
+      "stats": {
+        "possession_home": 65,
+        "possession_away": 35,
+        "shots_home": 28,
+        "shots_away": 6,
+        "shots_on_target_home": 9,
+        "shots_on_target_away": 1,
+        "corners_home": 12,
+        "corners_away": 1,
+        "source": "espn.ph + mykhel.com + soccerpunter.com (18 نونبر 2026) — لعبت 07 نونبر 2026 19:45 UTC"
+      },
+      "venue": "الملعب الأولمبي، روما",
+      "channel": "beIN Sports"
     },
     {
       "id": "genoa-milan-2026-11-08",
@@ -321,7 +431,20 @@
       "league_name": "الدوري الإيطالي",
       "date": "2026-11-08",
       "status": "finished",
-      "source": "showupandplay.com (تقرير 08 نونبر 2026)"
+      "source": "showupandplay.com (تقرير 08 نونبر 2026)",
+      "stats": {
+        "possession_home": 38,
+        "possession_away": 62,
+        "shots_home": 17,
+        "shots_away": 6,
+        "shots_on_target_home": 5,
+        "shots_on_target_away": 2,
+        "corners_home": 3,
+        "corners_away": 0,
+        "source": "skysports.com + moneyball-odds.com + livescore.com (18 نونبر 2026)"
+      },
+      "venue": "ملعب لويجي فيراريس، جنوى",
+      "channel": "beIN Sports"
     },
     {
       "id": "fiorentina-juventus-2026-11-08",
@@ -333,7 +456,20 @@
       "league_name": "الدوري الإيطالي",
       "date": "2026-11-08",
       "status": "finished",
-      "source": "showupandplay.com (تقرير 08 نونبر 2026)"
+      "source": "showupandplay.com (تقرير 08 نونبر 2026)",
+      "stats": {
+        "possession_home": 41,
+        "possession_away": 59,
+        "shots_home": 22,
+        "shots_away": 18,
+        "shots_on_target_home": 6,
+        "shots_on_target_away": 6,
+        "corners_home": 5,
+        "corners_away": 12,
+        "source": "skysports.com + soccerway.com + flashscore.com (18 نونبر 2026)"
+      },
+      "venue": "ملعب أرتيميو فرانكي، فلورنسا",
+      "channel": "beIN Sports"
     }
   ]
 }

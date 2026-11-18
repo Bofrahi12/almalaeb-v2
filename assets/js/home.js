@@ -11,6 +11,7 @@
   }
   document.addEventListener("DOMContentLoaded", async function () {
     window.renderTicker("ticker-track");
+    await window.loadLogos();
     try {
       const articles = await window.MalaebData.news();
       if (articles.length) {
@@ -35,7 +36,7 @@
             <a class="more" href="league-${l.id}.html">الجدول الكامل ←</a>
           </div>
           ${window.standingsTableHTML(l, 5)}
-          <p style="color:var(--muted);font-size:.78rem;margin-top:6px">أول 5 مراكز موثقة — آخر تحقق: ${data.updated || ""}</p>
+          <p style="color:var(--muted);font-size:.78rem;margin-top:6px">أول 5 مراكز — الجدول الكامل في صفحة الدوري — آخر تحقق: ${data.updated || ""}</p>
         </div>`).join("");
     } catch (e) {}
   });
