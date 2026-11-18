@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /tools/
 
-Sitemap: https://almalaeb.example.com/sitemap.xml
+Sitemap: https://almalaeb.onrender.com/sitemap.xml
