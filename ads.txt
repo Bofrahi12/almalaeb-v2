@@ -1,0 +1,5 @@
+# ads.txt — Authorized Digital Sellers
+# ملف التحقق من البائعين المعتمدين لـ Google AdSense
+# بعد قبول حسابك في AdSense، استبدل السطر التالي بالسطر الذي يعطيك إياه AdSense
+# الصيغة: google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0
+google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0

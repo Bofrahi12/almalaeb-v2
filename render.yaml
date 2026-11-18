@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: almalaeb
+    env: static
+    buildCommand: ""
+    staticPublishPath: .

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>آخر أخبار كرة القدم | الملعب</title>
+<meta name="description" content="آخر أخبار كرة القدم: الدوريات الأوروبية الخمسة الكبرى، المنتخب المغربي والبطولة الاحترافية — تغطية يومية بالعربية.">
+<meta property="og:title" content="آخر الأخبار | الملعب">
+<meta property="og:locale" content="ar_MA">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚽</text></svg>">
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo"><span class="ball">⚽</span><span>الملعب<small>AL MALAEB</small></span></a>
+    <button class="menu-btn" aria-label="القائمة">☰</button>
+    <nav class="main-nav"><ul>
+      <li><a href="index.html">الرئيسية</a></li>
+      <li><a href="matches.html">المباريات</a></li>
+      <li><a href="standings.html">الترتيب</a></li>
+      <li><a href="news.html" class="active">الأخبار</a></li>
+    </ul></nav>
+  </div>
+</header>
+<!-- AdSense: leaderboard (728x90) — ضع كود إعلانك هنا بعد قبول حسابك -->
+<div class="container"><div class="ad-slot"><div class="ad-leaderboard">مساحة إعلانية — Leaderboard 970×250</div></div></div>
+<div class="ticker-wrap"><div class="container ticker">
+  <span class="ticker-label">مباشر</span>
+  <div class="ticker-track" id="ticker-track"><span class="ticker-item">جارٍ التحميل…</span></div>
+</div></div>
+
+<main class="container">
+  <section class="section">
+    <div class="section-head"><h2>📰 آخر الأخبار</h2></div>
+    <p class="data-note">الأخبار أرشيف بتاريخ نشرها (شتنبر 2026) — الأرقام والترتيب الحاليان في صفحات الترتيب والمباريات.</p>
+    <div class="tabs" id="cat-tabs">
+      <button data-cat="all" class="active">الكل</button>
+      <button data-cat="المنتخب المغربي">المنتخب المغربي</button>
+      <button data-cat="البطولة المغربية">البطولة المغربية</button>
+      <button data-cat="الدوري الإسباني">الليغا</button>
+      <button data-cat="الدوري الإنجليزي">البريميرليغ</button>
+      <button data-cat="الدوري الفرنسي">الليغ 1</button>
+    </div>
+    <div class="news-grid" id="news-grid"><p style="color:var(--muted)">جارٍ التحميل…</p></div>
+    <!-- AdSense: in-feed -->
+    <div class="ad-slot"><div class="ad-infeed">مساحة إعلانية داخل المحتوى — In-feed</div></div>
+    <div class="cpa-slot"><b>مساحة إعلانية — CPA (Placeholder)</b>تُضاف هنا عروض موثوقة بعد اختيارها — بدون نوافذ منبثقة وبدون روابط مراهنات.<small>لا يوجد أي عرض حي أو رابط خارجي في هذه المساحة حالياً.</small></div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div><h4>⚽ الملعب</h4><p style="color:var(--muted);font-size:.9rem">موقعك المغربي لمتابعة كرة القدم: نتائج مباشرة، جداول الترتيب، وآخر الأخبار.</p></div>
+      <div><h4>أقسام الموقع</h4><ul>
+        <li><a href="matches.html">مباريات اليوم</a></li><li><a href="standings.html">جداول الترتيب</a></li>
+        <li><a href="news.html">آخر الأخبار</a></li><li><a href="league-botola.html">البطولة المغربية</a></li></ul></div>
+      <div><h4>معلومات</h4><ul>
+        <li><a href="about.html">من نحن</a></li><li><a href="contact.html">اتصل بنا</a></li><li><a href="privacy.html">سياسة الخصوصية</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>© <span class="js-year">2026</span> الملعب — جميع الحقوق محفوظة.</span><span>آخر تحديث: 18 نونبر 2026</span></div>
+  </div>
+</footer>
+<div class="anchored-ad"><span>مساحة إعلانية للهواتف</span><button class="close-ad">✕</button></div>
+<script src="assets/js/data-fallback.js"></script>
+<script src="assets/js/main.js"></script>
+<script>
+(function(){
+  let ARTICLES=[];
+  function card(a){
+    return `<a href="news/${a.slug}.html" class="news-card">
+      <div class="news-thumb">${a.emoji}</div>
+      <div class="news-body"><div class="news-meta"><span class="cat">${a.category}</span><span>${a.date}</span></div>
+      <h3>${a.title}</h3><p>${a.excerpt}</p></div></a>`;
+  }
+  function render(cat){
+    const list = cat==="all"?ARTICLES:ARTICLES.filter(a=>a.category===cat);
+    document.getElementById("news-grid").innerHTML = list.length?list.map(card).join("")
+      :'<p style="color:var(--muted)">لا توجد أخبار في هذا التصنيف حالياً.</p>';
+  }
+  document.addEventListener("DOMContentLoaded", async function(){
+    window.renderTicker("ticker-track");
+    ARTICLES = await window.MalaebData.news();
+    render("all");
+    document.querySelectorAll("#cat-tabs button").forEach(b=>b.addEventListener("click",()=>{
+      document.querySelectorAll("#cat-tabs button").forEach(x=>x.classList.remove("active"));
+      b.classList.add("active"); render(b.dataset.cat);
+    }));
+  });
+})();
+</script>
+</body>
+</html>

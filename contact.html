@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>اتصل بنا | الملعب</title>
+<meta name="description" content="تواصل مع فريق الملعب: اقتراحات، تصحيحات، شراكات إعلانية.">
+<meta property="og:locale" content="ar_MA">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚽</text></svg>">
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo"><span class="ball">⚽</span><span>الملعب<small>AL MALAEB</small></span></a>
+    <button class="menu-btn" aria-label="القائمة">☰</button>
+    <nav class="main-nav"><ul>
+      <li><a href="index.html">الرئيسية</a></li>
+      <li><a href="matches.html">المباريات</a></li>
+      <li><a href="standings.html">الترتيب</a></li>
+      <li><a href="news.html">الأخبار</a></li>
+    </ul></nav>
+  </div>
+</header>
+<!-- AdSense: leaderboard (728x90) -->
+<div class="container"><div class="ad-slot"><div class="ad-leaderboard">مساحة إعلانية — Leaderboard 970×250</div></div></div>
+<div class="ticker-wrap"><div class="container ticker">
+  <span class="ticker-label">مباشر</span>
+  <div class="ticker-track" id="ticker-track"><span class="ticker-item">جارٍ التحميل…</span></div>
+</div></div>
+
+<main class="container page" style="max-width:680px">
+  <h1>اتصل بنا</h1>
+  <p style="color:var(--muted)">راسلنا لأي اقتراح، تصحيح معلومة، أو استفسار حول الإعلان في الموقع — نرد عادة خلال 48 ساعة.</p>
+  <form id="contact-form" class="contact-form" novalidate>
+    <div class="form-row">
+      <div class="form-group"><label for="c-name">الاسم الكامل *</label><input id="c-name" name="name" type="text" required></div>
+      <div class="form-group"><label for="c-email">البريد الإلكتروني *</label><input id="c-email" name="email" type="email" required dir="ltr"></div>
+    </div>
+    <div class="form-group"><label for="c-subject">الموضوع *</label>
+      <select id="c-subject" name="subject">
+        <option>اقتراح</option><option>تصحيح معلومة</option><option>إعلان وشراكات</option><option>موضوع آخر</option>
+      </select>
+    </div>
+    <div class="form-group"><label for="c-msg">رسالتك *</label><textarea id="c-msg" name="message" rows="6" required></textarea></div>
+    <button class="btn" type="submit">إرسال الرسالة</button>
+    <div class="form-note" role="status"></div>
+  </form>
+  <p style="color:var(--muted);font-size:.85rem;margin-top:18px">💡 هذا النموذج تجريبي (front-end فقط). لاستقبال الرسائل فعلياً اربطه بخدمة مثل Formspree أو Netlify Forms — راجع README.</p>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div><h4>⚽ الملعب</h4><p style="color:var(--muted);font-size:.9rem">موقعك المغربي لمتابعة كرة القدم: نتائج مباشرة، جداول الترتيب، وآخر الأخبار.</p></div>
+      <div><h4>أقسام الموقع</h4><ul>
+        <li><a href="matches.html">مباريات اليوم</a></li><li><a href="standings.html">جداول الترتيب</a></li>
+        <li><a href="news.html">آخر الأخبار</a></li><li><a href="league-botola.html">البطولة المغربية</a></li></ul></div>
+      <div><h4>معلومات</h4><ul>
+        <li><a href="about.html">من نحن</a></li><li><a href="contact.html">اتصل بنا</a></li><li><a href="privacy.html">سياسة الخصوصية</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>© <span class="js-year">2026</span> الملعب — جميع الحقوق محفوظة.</span><span>آخر تحديث: 18 نونبر 2026</span></div>
+  </div>
+</footer>
+<div class="anchored-ad"><span>مساحة إعلانية للهواتف</span><button class="close-ad">✕</button></div>
+<script src="assets/js/data-fallback.js"></script>
+<script src="assets/js/main.js"></script>
+<script>
+document.getElementById("contact-form").addEventListener("submit",function(e){
+  e.preventDefault();
+  const name=document.getElementById("c-name").value.trim(),
+        email=document.getElementById("c-email").value.trim(),
+        msg=document.getElementById("c-msg").value.trim(),
+        note=this.querySelector(".form-note");
+  if(!name||!email||!msg){note.textContent="⚠ المرجو ملء جميع الحقول المطلوبة.";return;}
+  if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)){note.textContent="⚠ المرجو إدخال بريد إلكتروني صحيح.";return;}
+  note.textContent="✅ شكراً "+name+"! تم استلام رسالتك بنجاح وسنرد عليك قريباً.";
+  this.reset();
+});
+document.addEventListener("DOMContentLoaded",()=>window.renderTicker("ticker-track"));
+</script>
+</body>
+</html>
