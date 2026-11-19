@@ -21,7 +21,7 @@
     async leagues() {
       const d = await loadJSON("data/leagues.json");
       if (d && d.leagues) return d;
-      return { leagues: FALLBACK.leagues, updated: "نسخة احتياطية — آخر تحقق 2026-11-18" };
+      return { leagues: FALLBACK.leagues, updated: (typeof FALLBACK !== "undefined" && FALLBACK.updated) || "" };
     },
     async fixtures() {
       const d = await loadJSON("data/fixtures.json");

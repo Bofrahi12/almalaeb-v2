@@ -1,5 +1,6 @@
-/* الملعب V2 — بيانات احتياطية موثقة (18 نونبر 2026)، تُستخدم فقط إذا تعذّر تحميل data/*.json */
+/* الملعب V2 — بيانات احتياطية موثقة (الخميس 19 نونبر 2026)، تُستخدم فقط إذا تعذّر تحميل data/*.json */
 const FALLBACK = {
+  "updated": "2026-11-19",
   "leagues": [
     {
       "id": "premier-league",
@@ -9,7 +10,7 @@ const FALLBACK = {
       "season": "2026-27",
       "round": "الجولة 10",
       "next_round": "الجولة 11 — 21–23 نونبر 2026",
-      "source": "thestatsapi.com (18 نونبر 2026، 22:41 UTC) + مطابقة مع nbcsports.com وrenderfoot.com — الهدافون: renderfoot.com (18 نونبر 2026) + مطابقة مع nbcsports.com وradiotimes.com",
+      "source": "ESPN (site.api.espn.com + sports.core.api.espn.com) — الخميس 19 نونبر 2026 — الهدافون: ESPN",
       "table": [
         {
           "pos": 1,
@@ -274,21 +275,6 @@ const FALLBACK = {
           "goals": 6
         },
         {
-          "player": "إيفانيلسون",
-          "team": "بورنموث",
-          "goals": 5
-        },
-        {
-          "player": "جواو بيدرو",
-          "team": "تشيلسي",
-          "goals": 5
-        },
-        {
-          "player": "ريان شرقي",
-          "team": "مانشستر سيتي",
-          "goals": 5
-        },
-        {
           "player": "مورغان روجرز",
           "team": "تشيلسي",
           "goals": 5
@@ -299,12 +285,27 @@ const FALLBACK = {
           "goals": 5
         },
         {
+          "player": "إيفانيلسون",
+          "team": "بورنموث",
+          "goals": 5
+        },
+        {
+          "player": "ريان شرقي",
+          "team": "مانشستر سيتي",
+          "goals": 5
+        },
+        {
+          "player": "جواو بيدرو",
+          "team": "تشيلسي",
+          "goals": 5
+        },
+        {
           "player": "بريان مبيومو",
           "team": "مانشستر يونايتد",
           "goals": 4
         }
       ],
-      "meta": "جدول ترتيب الدوري الإنجليزي الممتاز 2026-27: آرسنال في الصدارة بـ27 نقطة، برايتون 22، مانشستر سيتي 21 — الهدافون، مباريات الجولة 11 (21–23 نونبر) والنتائج."
+      "meta": "جدول ترتيب الدوري الإنجليزي الممتاز 2026-27: آرسنال في الصدارة بـ27 نقطة، برايتون 22، مانشستر سيتي 21 — إيرلينغ هالاند هداف الدوري بـ9 أهداف، مباريات الجولة 11 — 21–23 نونبر 2026 والنتائج."
     },
     {
       "id": "la-liga",
@@ -314,7 +315,7 @@ const FALLBACK = {
       "season": "2026-27",
       "round": "الجولة 12",
       "next_round": "الجولة 13 — 20–23 نونبر 2026",
-      "source": "thestatsapi.com (18 نونبر 2026، 22:47 UTC) + مطابقة مع laligatable.co وsportsbetting3.com — الهدافون: renderfoot.com (18 نونبر 2026) + مطابقة مع fotmob.com وmoroccoworldnews.com",
+      "source": "ESPN (site.api.espn.com + sports.core.api.espn.com) — الخميس 19 نونبر 2026 — الهدافون: ESPN",
       "table": [
         {
           "pos": 1,
@@ -584,13 +585,13 @@ const FALLBACK = {
           "goals": 8
         },
         {
-          "player": "فيرمين لوبيز",
-          "team": "برشلونة",
+          "player": "سيرخيو كاميلو",
+          "team": "رايو فايكانو",
           "goals": 7
         },
         {
-          "player": "سيرخيو كاميلو",
-          "team": "رايو فايكانو",
+          "player": "فيرمين لوبيز",
+          "team": "برشلونة",
           "goals": 7
         },
         {
@@ -609,7 +610,7 @@ const FALLBACK = {
           "goals": 5
         }
       ],
-      "meta": "جدول ترتيب الدوري الإسباني 2026-27: برشلونة متصدر بـ33 نقطة، ريال مدريد 30، أتلتيكو 28 — رافينيا هداف الليغا بـ15 هدفاً، مباريات الجولة 13 والنتائج."
+      "meta": "جدول ترتيب الدوري الإسباني 2026-27: برشلونة في الصدارة بـ33 نقطة، ريال مدريد 30، أتلتيكو مدريد 28 — رافينيا هداف الدوري بـ15 أهداف، مباريات الجولة 13 — 20–23 نونبر 2026 والنتائج."
     },
     {
       "id": "serie-a",
@@ -619,7 +620,7 @@ const FALLBACK = {
       "season": "2026-27",
       "round": "الجولة 11",
       "next_round": "الجولة 12 — 21–23 نونبر 2026",
-      "source": "thestatsapi.com (18 نونبر 2026، 22:53 UTC) + مطابقة مع scanodds.com وpitchlabstats.com — الهدافون: renderfoot.com (18 نونبر 2026) + مطابقة مع pitchlabstats.com وmyfootballfacts.com",
+      "source": "ESPN (site.api.espn.com + sports.core.api.espn.com) — الخميس 19 نونبر 2026 — الهدافون: ESPN",
       "table": [
         {
           "pos": 1,
@@ -869,13 +870,13 @@ const FALLBACK = {
           "goals": 9
         },
         {
-          "player": "دونييل مالين",
-          "team": "روما",
+          "player": "أنتونيو رايموندو",
+          "team": "فروزينوني",
           "goals": 8
         },
         {
-          "player": "أنتونيو رايموندو",
-          "team": "فروزينوني",
+          "player": "دونييل مالين",
+          "team": "روما",
           "goals": 8
         },
         {
@@ -889,8 +890,8 @@ const FALLBACK = {
           "goals": 6
         },
         {
-          "player": "أدريان رابيو",
-          "team": "ميلان",
+          "player": "جياكومو كالو",
+          "team": "فروزينوني",
           "goals": 5
         },
         {
@@ -899,22 +900,22 @@ const FALLBACK = {
           "goals": 5
         },
         {
-          "player": "ألفادجو سيسيه",
+          "player": "دانيال مالديني",
+          "team": "كالياري",
+          "goals": 5
+        },
+        {
+          "player": "أدريان رابيو",
           "team": "ميلان",
           "goals": 5
         },
         {
-          "player": "جياكومو كالو",
-          "team": "فروزينوني",
-          "goals": 5
-        },
-        {
-          "player": "دانيال مالديني",
-          "team": "كالياري",
+          "player": "ألفادجو سيسيه",
+          "team": "ميلان",
           "goals": 5
         }
       ],
-      "meta": "جدول ترتيب الدوري الإيطالي 2026-27: لاتسيو في الصدارة بـ29 نقطة، إنتر 28، روما 27 — الهدافون، مباريات الجولة 12 (21–23 نونبر) والنتائج."
+      "meta": "جدول ترتيب الدوري الإيطالي 2026-27: لاتسيو في الصدارة بـ29 نقطة، إنتر ميلان 28، روما 27 — غوستافو فاريلا هداف الدوري بـ9 أهداف، مباريات الجولة 12 — 21–23 نونبر 2026 والنتائج."
     },
     {
       "id": "bundesliga",
@@ -924,7 +925,7 @@ const FALLBACK = {
       "season": "2026-27",
       "round": "الجولة 9",
       "next_round": "الجولة 10 — 20–22 نونبر 2026",
-      "source": "thestatsapi.com (18 نونبر 2026، 22:51 UTC) + مطابقة مع bettingtips.africa وturingstats.com — الهدافون: bundesliga.com + renderfoot.com (18 نونبر 2026)",
+      "source": "ESPN (site.api.espn.com + sports.core.api.espn.com) — الخميس 19 نونبر 2026 — الهدافون: ESPN",
       "table": [
         {
           "pos": 1,
@@ -1160,19 +1161,14 @@ const FALLBACK = {
           "goals": 6
         },
         {
-          "player": "يونس ابن طالب",
-          "team": "آينتراخت فرانكفورت",
-          "goals": 6
-        },
-        {
           "player": "فيليب تيتز",
           "team": "ماينز",
           "goals": 6
         },
         {
-          "player": "كريستوفر نكونكو",
-          "team": "لايبزيغ",
-          "goals": 5
+          "player": "يونس ابن طالب",
+          "team": "آينتراخت فرانكفورت",
+          "goals": 6
         },
         {
           "player": "جوناثان بوركاردت",
@@ -1190,12 +1186,17 @@ const FALLBACK = {
           "goals": 5
         },
         {
-          "player": "رومولو",
+          "player": "مايكل غريغوريتش",
+          "team": "أوغسبورغ",
+          "goals": 5
+        },
+        {
+          "player": "كريستوفر نكونكو",
           "team": "لايبزيغ",
           "goals": 5
         }
       ],
-      "meta": "جدول ترتيب الدوري الألماني 2026-27: بايرن ميونيخ ودورتموند متساويان بـ21 نقطة، فرايبورغ 19 — الهدافون، مباريات الجولة 10 (20–22 نونبر) والنتائج."
+      "meta": "جدول ترتيب الدوري الألماني 2026-27: بايرن ميونيخ في الصدارة بـ21 نقطة، بوروسيا دورتموند 21، فرايبورغ 19 — نيكلاس فولكروغ هداف الدوري بـ9 أهداف، مباريات الجولة 10 — 20–22 نونبر 2026 والنتائج."
     },
     {
       "id": "ligue-1",
@@ -1205,7 +1206,7 @@ const FALLBACK = {
       "season": "2026-27",
       "round": "الجولة 10",
       "next_round": "الجولة 11 — 20–22 نونبر 2026",
-      "source": "thestatsapi.com (18 نونبر 2026، 22:31 UTC) + مطابقة مع xgstats.com وligue1schedule.com — الهدافون: renderfoot.com (18 نونبر 2026) + مطابقة مع myfootballfacts.com وsocerstreams.org",
+      "source": "ESPN (site.api.espn.com + sports.core.api.espn.com) — الخميس 19 نونبر 2026 — الهدافون: ESPN",
       "table": [
         {
           "pos": 1,
@@ -1441,13 +1442,13 @@ const FALLBACK = {
           "goals": 7
         },
         {
-          "player": "كاميرون آرتشر",
-          "team": "أوكسير",
+          "player": "إلي واهي",
+          "team": "نيس",
           "goals": 6
         },
         {
-          "player": "إلي واهي",
-          "team": "نيس",
+          "player": "كاميرون آرتشر",
+          "team": "أوكسير",
           "goals": 6
         },
         {
@@ -1456,8 +1457,8 @@ const FALLBACK = {
           "goals": 5
         },
         {
-          "player": "بولاي ديا",
-          "team": "رين",
+          "player": "فلوريان توفان",
+          "team": "لانس",
           "goals": 5
         },
         {
@@ -1466,8 +1467,8 @@ const FALLBACK = {
           "goals": 5
         },
         {
-          "player": "فلوريان توفان",
-          "team": "لانس",
+          "player": "بولاي ديا",
+          "team": "رين",
           "goals": 5
         },
         {
@@ -1476,7 +1477,7 @@ const FALLBACK = {
           "goals": 4
         }
       ],
-      "meta": "جدول ترتيب الدوري الفرنسي 2026-27: باريس سان جيرمان متصدر بـ23 نقطة، ليل 21، باريس إف سي 20 — الهدافون، مباريات الجولة 11 (20–22 نونبر) والنتائج."
+      "meta": "جدول ترتيب الدوري الفرنسي 2026-27: باريس سان جيرمان في الصدارة بـ23 نقطة، ليل 21، باريس إف سي 20 — لاسين سينايوكو هداف الدوري بـ9 أهداف، مباريات الجولة 11 — 20–22 نونبر 2026 والنتائج."
     },
     {
       "id": "botola",
@@ -1485,7 +1486,7 @@ const FALLBACK = {
       "country": "المغرب",
       "season": "2026-27",
       "round": "الجولة 7",
-      "next_round": "الجولة 8 — التاريخ قيد التأكيد",
+      "next_round": "الجولة 8 — الاستئناف الجمعة 27 نونبر 2026 (قرار LNFP)؛ مباريات الأندية الإفريقية مؤجلة أكثر",
       "source": "ويكيبيديا 2026–27 Botola Pro — المصدر: FRMF.ma (مباريات حتى 09 نونبر 2026) + مطابقة مع pitchlabstats.com وglobalsportsarchive.com — الهدافون: pitchlabstats.com + ويكيبيديا (FRMF) — ملاحظة: مباراة الوداد–وداد تمارة حُسمت 3–0 للوداد بقرار LNFP في 07 نونبر 2026 (لاعب غير مؤهل)، وخصم نقطة واحدة من وداد تمارة",
       "table": [
         {
@@ -1654,7 +1655,9 @@ const FALLBACK = {
           "gf": 5,
           "ga": 7,
           "gd": -2,
-          "pts": 6
+          "pts": 6,
+          "deduction": 1,
+          "note": "خصم نقطة واحدة (قرار LNFP 7 نونبر 2026 — لاعب غير مؤهل ضد الوداد)"
         },
         {
           "pos": 15,
@@ -1688,7 +1691,7 @@ const FALLBACK = {
           "goals": 6
         },
         {
-          "player": "عبد الرزاق النقوس",
+          "player": "عبد الرزاق الناقوس",
           "team": "الدفاع الحسني الجديدي",
           "goals": 6
         },
@@ -1718,9 +1721,9 @@ const FALLBACK = {
           "goals": 3
         },
         {
-          "player": "معاد مشتنيم",
-          "team": "الدفاع الحسني الجديدي",
-          "goals": 2
+          "player": "عثمان صابري",
+          "team": "وداد تمارة",
+          "goals": 3
         },
         {
           "player": "ت. ماباسا",
@@ -1733,196 +1736,287 @@ const FALLBACK = {
           "goals": 2
         }
       ],
-      "meta": "جدول ترتيب البطولة الاحترافية المغربية 2026-27: الكوكب المراكشي متصدر بـ16 نقطة، النادي المكناسي والوداد 14، الرجاء 12 — مباريات الجولة 8 والنتائج."
+      "meta": "جدول ترتيب البطولة الاحترافية المغربية 2026-27: الكوكب المراكشي متصدر بـ16 نقطة، النادي المكناسي 14، الوداد الرياضي 14 — عماد رياحي هداف البطولة بـ6 أهداف، مباريات الجولة 8 — الاستئناف الجمعة 27 نونبر 2026 (قرار LNFP)؛ مباريات الأندية الإفريقية مؤجلة أكثر والنتائج."
     }
   ],
   "fixtures": {
     "live": [],
     "today": [],
-    "tomorrow": [],
-    "upcoming": [
+    "tomorrow": [
       {
-        "id": "bayern-koln-2026-11-20",
+        "id": "bayern-munich-koln-2026-11-20",
         "home": "بايرن ميونيخ",
         "away": "كولن",
         "league": "bundesliga",
         "league_name": "الدوري الألماني",
         "date": "2026-11-20",
-        "time": "20:30",
-        "status": "scheduled",
-        "source": "kickofflens.com + football.mib.news (19:30 UTC)",
+        "source": "ESPN (site.api.espn.com) — 20 نونبر 2026",
         "venue": "أليانز أرينا، ميونيخ",
-        "channel": "beIN Sports"
+        "channel": "beIN Sports",
+        "time": "20:30",
+        "status": "scheduled"
       },
       {
-        "id": "athletic-espanyol-2026-11-20",
-        "home": "أتلتيك بلباو",
-        "away": "إسبانيول",
-        "league": "la-liga",
-        "league_name": "الدوري الإسباني",
-        "date": "2026-11-20",
-        "time": "21:00",
-        "status": "scheduled",
-        "source": "kickofflens.com + football.mib.news (20:00 UTC)",
-        "venue": "سان ماميس، بلباو",
-        "channel": "beIN Sports"
-      },
-      {
-        "id": "troyes-lehavre-2026-11-20",
+        "id": "troyes-le-havre-2026-11-20",
         "home": "تروا",
         "away": "لوهافر",
         "league": "ligue-1",
         "league_name": "الدوري الفرنسي",
         "date": "2026-11-20",
-        "time": "20:45",
-        "status": "scheduled",
-        "source": "vavel.com (14:45 ET = 19:45 UTC) + football.mib.news",
+        "source": "ESPN (site.api.espn.com) — 20 نونبر 2026",
         "venue": "ملعب لوب، تروا",
-        "channel": "beIN Sports"
+        "channel": "beIN Sports",
+        "time": "20:45",
+        "status": "scheduled"
       },
       {
-        "id": "man-city-fulham-2026-11-21",
+        "id": "athletic-bilbao-espanyol-2026-11-20",
+        "home": "أتلتيك بلباو",
+        "away": "إسبانيول",
+        "league": "la-liga",
+        "league_name": "الدوري الإسباني",
+        "date": "2026-11-20",
+        "source": "ESPN (site.api.espn.com) — 20 نونبر 2026",
+        "venue": "سان ماميس، بلباو",
+        "channel": "beIN Sports",
+        "time": "21:00",
+        "status": "scheduled"
+      }
+    ],
+    "upcoming": [
+      {
+        "id": "bayern-munich-koln-2026-11-20",
+        "home": "بايرن ميونيخ",
+        "away": "كولن",
+        "league": "bundesliga",
+        "league_name": "الدوري الألماني",
+        "date": "2026-11-20",
+        "source": "ESPN (site.api.espn.com) — 20 نونبر 2026",
+        "venue": "أليانز أرينا، ميونيخ",
+        "channel": "beIN Sports",
+        "time": "20:30",
+        "status": "scheduled"
+      },
+      {
+        "id": "troyes-le-havre-2026-11-20",
+        "home": "تروا",
+        "away": "لوهافر",
+        "league": "ligue-1",
+        "league_name": "الدوري الفرنسي",
+        "date": "2026-11-20",
+        "source": "ESPN (site.api.espn.com) — 20 نونبر 2026",
+        "venue": "ملعب لوب، تروا",
+        "channel": "beIN Sports",
+        "time": "20:45",
+        "status": "scheduled"
+      },
+      {
+        "id": "athletic-bilbao-espanyol-2026-11-20",
+        "home": "أتلتيك بلباو",
+        "away": "إسبانيول",
+        "league": "la-liga",
+        "league_name": "الدوري الإسباني",
+        "date": "2026-11-20",
+        "source": "ESPN (site.api.espn.com) — 20 نونبر 2026",
+        "venue": "سان ماميس، بلباو",
+        "channel": "beIN Sports",
+        "time": "21:00",
+        "status": "scheduled"
+      },
+      {
+        "id": "manchester-city-fulham-2026-11-21",
         "home": "مانشستر سيتي",
         "away": "فولهام",
         "league": "premier-league",
-        "league_name": "الدوري الإنجليزي",
+        "league_name": "الدوري الإنجليزي الممتاز",
         "date": "2026-11-21",
-        "time": "13:30",
-        "status": "scheduled",
-        "source": "premierleague.com + nbcsports.com (12:30 UK)",
+        "source": "ESPN (site.api.espn.com) — 21 نونبر 2026",
         "venue": "ملعب الاتحاد، مانشستر",
-        "channel": "beIN Sports"
+        "channel": "beIN Sports",
+        "time": "13:30",
+        "status": "scheduled"
+      },
+      {
+        "id": "alaves-deportivo-la-coruna-2026-11-21",
+        "home": "ديبورتيفو ألافيس",
+        "away": "ديبورتيفو لاكورونيا",
+        "league": "la-liga",
+        "league_name": "الدوري الإسباني",
+        "date": "2026-11-21",
+        "source": "ESPN (site.api.espn.com) — 21 نونبر 2026",
+        "venue": "مينديزوروتزا، فيتوريا",
+        "channel": "beIN Sports",
+        "time": "14:00",
+        "status": "scheduled"
+      },
+      {
+        "id": "como-cagliari-2026-11-21",
+        "home": "كومو",
+        "away": "كالياري",
+        "league": "serie-a",
+        "league_name": "الدوري الإيطالي",
+        "date": "2026-11-21",
+        "source": "ESPN (site.api.espn.com) — 21 نونبر 2026",
+        "venue": "ملعب جوزيبي سينيغاليا، كومو",
+        "channel": "beIN Sports",
+        "time": "15:00",
+        "status": "scheduled"
+      },
+      {
+        "id": "lazio-lecce-2026-11-21",
+        "home": "لاتسيو",
+        "away": "ليتشي",
+        "league": "serie-a",
+        "league_name": "الدوري الإيطالي",
+        "date": "2026-11-21",
+        "source": "ESPN (site.api.espn.com) — 21 نونبر 2026",
+        "venue": "الملعب الأولمبي، روما",
+        "channel": "beIN Sports",
+        "time": "15:00",
+        "status": "scheduled"
+      },
+      {
+        "id": "union-berlin-rb-leipzig-2026-11-21",
+        "home": "يونيون برلين",
+        "away": "لايبزيغ",
+        "league": "bundesliga",
+        "league_name": "الدوري الألماني",
+        "date": "2026-11-21",
+        "source": "ESPN (site.api.espn.com) — 21 نونبر 2026",
+        "venue": "ملعب آلته فورستيري، برلين",
+        "channel": "beIN Sports",
+        "time": "15:30",
+        "status": "scheduled"
+      },
+      {
+        "id": "bayer-leverkusen-paderborn-2026-11-21",
+        "home": "باير ليفركوزن",
+        "away": "بادربورن",
+        "league": "bundesliga",
+        "league_name": "الدوري الألماني",
+        "date": "2026-11-21",
+        "source": "ESPN (site.api.espn.com) — 21 نونبر 2026",
+        "venue": "باي أرينا، ليفركوزن",
+        "channel": "beIN Sports",
+        "time": "15:30",
+        "status": "scheduled"
+      },
+      {
+        "id": "borussia-monchengladbach-borussia-dortmund-2026-11-21",
+        "home": "بوروسيا مونشنغلادباخ",
+        "away": "بوروسيا دورتموند",
+        "league": "bundesliga",
+        "league_name": "الدوري الألماني",
+        "date": "2026-11-21",
+        "source": "ESPN (site.api.espn.com) — 21 نونبر 2026",
+        "venue": "بوروسيا بارك، مونشنغلادباخ",
+        "channel": "beIN Sports",
+        "time": "15:30",
+        "status": "scheduled"
+      },
+      {
+        "id": "eintracht-frankfurt-hoffenheim-2026-11-21",
+        "home": "آينتراخت فرانكفورت",
+        "away": "هوفنهايم",
+        "league": "bundesliga",
+        "league_name": "الدوري الألماني",
+        "date": "2026-11-21",
+        "source": "ESPN (site.api.espn.com) — 21 نونبر 2026",
+        "venue": "دويتشه بنك بارك، فرانكفورت",
+        "channel": "beIN Sports",
+        "time": "15:30",
+        "status": "scheduled"
+      },
+      {
+        "id": "elversberg-freiburg-2026-11-21",
+        "home": "إلفرسبرغ",
+        "away": "فرايبورغ",
+        "league": "bundesliga",
+        "league_name": "الدوري الألماني",
+        "date": "2026-11-21",
+        "source": "ESPN (site.api.espn.com) — 21 نونبر 2026",
+        "venue": "ملعب أورسافارم أرينا، إلفرسبرغ",
+        "channel": "beIN Sports",
+        "time": "15:30",
+        "status": "scheduled"
+      },
+      {
+        "id": "bournemouth-nottingham-forest-2026-11-21",
+        "home": "بورنموث",
+        "away": "نوتينغهام فورست",
+        "league": "premier-league",
+        "league_name": "الدوري الإنجليزي الممتاز",
+        "date": "2026-11-21",
+        "source": "ESPN (site.api.espn.com) — 21 نونبر 2026",
+        "venue": "فيتاليتي ستاديوم، بورنموث",
+        "channel": "beIN Sports",
+        "time": "16:00",
+        "status": "scheduled"
       },
       {
         "id": "aston-villa-sunderland-2026-11-21",
         "home": "أستون فيلا",
         "away": "سندرلاند",
         "league": "premier-league",
-        "league_name": "الدوري الإنجليزي",
+        "league_name": "الدوري الإنجليزي الممتاز",
         "date": "2026-11-21",
-        "time": "16:00",
-        "status": "scheduled",
-        "source": "premierleague.com (15:00 UK)",
+        "source": "ESPN (site.api.espn.com) — 21 نونبر 2026",
         "venue": "فيلا بارك، برمنغهام",
-        "channel": "beIN Sports"
-      },
-      {
-        "id": "bournemouth-nottingham-2026-11-21",
-        "home": "بورنموث",
-        "away": "نوتينغهام فورست",
-        "league": "premier-league",
-        "league_name": "الدوري الإنجليزي",
-        "date": "2026-11-21",
+        "channel": "beIN Sports",
         "time": "16:00",
-        "status": "scheduled",
-        "source": "premierleague.com (15:00 UK)",
-        "venue": "فيتاليتي ستاديوم، بورنموث",
-        "channel": "beIN Sports"
+        "status": "scheduled"
       },
       {
-        "id": "coventry-crystal-palace-2026-11-21",
+        "id": "chelsea-leeds-united-2026-11-21",
+        "home": "تشيلسي",
+        "away": "ليدز يونايتد",
+        "league": "premier-league",
+        "league_name": "الدوري الإنجليزي الممتاز",
+        "date": "2026-11-21",
+        "source": "ESPN (site.api.espn.com) — 21 نونبر 2026",
+        "venue": "ستامفورد بريدج، لندن",
+        "channel": "beIN Sports",
+        "time": "16:00",
+        "status": "scheduled"
+      },
+      {
+        "id": "coventry-city-crystal-palace-2026-11-21",
         "home": "كوفنتري سيتي",
         "away": "كريستال بالاس",
         "league": "premier-league",
-        "league_name": "الدوري الإنجليزي",
+        "league_name": "الدوري الإنجليزي الممتاز",
         "date": "2026-11-21",
-        "time": "16:00",
-        "status": "scheduled",
-        "source": "livescore.in + premierleague.com (15:00 UK)",
+        "source": "ESPN (site.api.espn.com) — 21 نونبر 2026",
         "venue": "كوفنتري بيلدينغ سوسايتي أرينا، كوفنتري",
-        "channel": "beIN Sports"
+        "channel": "beIN Sports",
+        "time": "16:00",
+        "status": "scheduled"
       },
       {
-        "id": "tottenham-ipswich-2026-11-21",
+        "id": "tottenham-hotspur-ipswich-town-2026-11-21",
         "home": "توتنهام",
         "away": "إيبسويتش تاون",
         "league": "premier-league",
-        "league_name": "الدوري الإنجليزي",
+        "league_name": "الدوري الإنجليزي الممتاز",
         "date": "2026-11-21",
-        "time": "16:00",
-        "status": "scheduled",
-        "source": "livescore.in + premierleague.com (15:00 UK)",
+        "source": "ESPN (site.api.espn.com) — 21 نونبر 2026",
         "venue": "ملعب توتنهام هوتسبير، لندن",
-        "channel": "beIN Sports"
-      },
-      {
-        "id": "newcastle-arsenal-2026-11-21",
-        "home": "نيوكاسل يونايتد",
-        "away": "آرسنال",
-        "league": "premier-league",
-        "league_name": "الدوري الإنجليزي",
-        "date": "2026-11-21",
-        "time": "18:30",
-        "status": "scheduled",
-        "source": "premierleague.com + nbcsports.com (17:30 UK)",
-        "venue": "سانت جيمس بارك، نيوكاسل",
         "channel": "beIN Sports",
-        "referee": "كريس كافانا"
+        "time": "16:00",
+        "status": "scheduled"
       },
       {
-        "id": "real-madrid-celta-2026-11-21",
-        "home": "ريال مدريد",
-        "away": "سيلتا فيغو",
+        "id": "rayo-vallecano-valencia-2026-11-21",
+        "home": "رايو فايكانو",
+        "away": "فالنسيا",
         "league": "la-liga",
         "league_name": "الدوري الإسباني",
         "date": "2026-11-21",
-        "time": null,
-        "status": "scheduled",
-        "source": "laligatable.co (المباراة المقبلة لريال مدريد — التوقيت قيد التأكيد)",
-        "venue": "سانتياغو برنابيو، مدريد",
-        "channel": "beIN Sports"
-      },
-      {
-        "id": "union-leipzig-2026-11-21",
-        "home": "يونيون برلين",
-        "away": "لايبزيغ",
-        "league": "bundesliga",
-        "league_name": "الدوري الألماني",
-        "date": "2026-11-21",
-        "time": "15:30",
-        "status": "scheduled",
-        "source": "fcstats.com (09:30 ET = 15:30 CET)",
-        "venue": "ملعب آلته فورستيري، برلين",
-        "channel": "beIN Sports"
-      },
-      {
-        "id": "leverkusen-paderborn-2026-11-21",
-        "home": "باير ليفركوزن",
-        "away": "بادربورن",
-        "league": "bundesliga",
-        "league_name": "الدوري الألماني",
-        "date": "2026-11-21",
-        "time": "15:30",
-        "status": "scheduled",
-        "source": "fcstats.com (09:30 ET = 15:30 CET)",
-        "venue": "باي أرينا، ليفركوزن",
-        "channel": "beIN Sports"
-      },
-      {
-        "id": "gladbach-dortmund-2026-11-21",
-        "home": "بوروسيا مونشنغلادباخ",
-        "away": "بوروسيا دورتموند",
-        "league": "bundesliga",
-        "league_name": "الدوري الألماني",
-        "date": "2026-11-21",
-        "time": "15:30",
-        "status": "scheduled",
-        "source": "fcstats.com (09:30 ET = 15:30 CET)",
-        "venue": "بوروسيا بارك، مونشنغلادباخ",
-        "channel": "beIN Sports"
-      },
-      {
-        "id": "augsburg-mainz-2026-11-21",
-        "home": "أوغسبورغ",
-        "away": "ماينز",
-        "league": "bundesliga",
-        "league_name": "الدوري الألماني",
-        "date": "2026-11-21",
-        "time": "15:30",
-        "status": "scheduled",
-        "source": "fcstats.com (09:30 ET = 15:30 CET)",
-        "venue": "ملعب WWK، أوغسبورغ",
-        "channel": "beIN Sports"
+        "source": "ESPN (site.api.espn.com) — 21 نونبر 2026",
+        "venue": "ملعب فاييكاس، مدريد",
+        "channel": "beIN Sports",
+        "time": "16:15",
+        "status": "scheduled"
       },
       {
         "id": "nice-psg-2026-11-21",
@@ -1931,11 +2025,102 @@ const FALLBACK = {
         "league": "ligue-1",
         "league_name": "الدوري الفرنسي",
         "date": "2026-11-21",
-        "time": "17:15",
-        "status": "scheduled",
-        "source": "vavel.com (11:15 ET = 16:15 UTC)",
+        "source": "ESPN (site.api.espn.com) — 21 نونبر 2026",
         "venue": "أليانز ريفييرا، نيس",
-        "channel": "beIN Sports"
+        "channel": "beIN Sports",
+        "time": "17:15",
+        "status": "scheduled"
+      },
+      {
+        "id": "parma-roma-2026-11-21",
+        "home": "بارما",
+        "away": "روما",
+        "league": "serie-a",
+        "league_name": "الدوري الإيطالي",
+        "date": "2026-11-21",
+        "source": "ESPN (site.api.espn.com) — 21 نونبر 2026",
+        "venue": "ملعب إنيو تارديني، بارما",
+        "channel": "beIN Sports",
+        "time": "18:00",
+        "status": "scheduled"
+      },
+      {
+        "id": "newcastle-united-arsenal-2026-11-21",
+        "home": "نيوكاسل يونايتد",
+        "away": "آرسنال",
+        "league": "premier-league",
+        "league_name": "الدوري الإنجليزي الممتاز",
+        "date": "2026-11-21",
+        "source": "ESPN (site.api.espn.com) — 21 نونبر 2026",
+        "venue": "سانت جيمس بارك، نيوكاسل",
+        "channel": "beIN Sports",
+        "time": "18:30",
+        "status": "scheduled"
+      },
+      {
+        "id": "sevilla-real-betis-2026-11-21",
+        "home": "إشبيلية",
+        "away": "ريال بيتيس",
+        "league": "la-liga",
+        "league_name": "الدوري الإسباني",
+        "date": "2026-11-21",
+        "source": "ESPN (site.api.espn.com) — 21 نونبر 2026",
+        "venue": "رامون سانشيز بيزخوان، إشبيلية",
+        "channel": "beIN Sports",
+        "time": "18:30",
+        "status": "scheduled"
+      },
+      {
+        "id": "schalke-04-stuttgart-2026-11-21",
+        "home": "شالكه",
+        "away": "شتوتغارت",
+        "league": "bundesliga",
+        "league_name": "الدوري الألماني",
+        "date": "2026-11-21",
+        "source": "ESPN (site.api.espn.com) — 21 نونبر 2026",
+        "venue": "فيلتينس أرينا، غيلسنكيرشن",
+        "channel": "beIN Sports",
+        "time": "18:30",
+        "status": "scheduled"
+      },
+      {
+        "id": "napoli-torino-2026-11-21",
+        "home": "نابولي",
+        "away": "تورينو",
+        "league": "serie-a",
+        "league_name": "الدوري الإيطالي",
+        "date": "2026-11-21",
+        "source": "ESPN (site.api.espn.com) — 21 نونبر 2026",
+        "venue": "ملعب دييغو أرماندو مارادونا، نابولي",
+        "channel": "beIN Sports",
+        "time": "20:45",
+        "status": "scheduled"
+      },
+      {
+        "id": "monaco-auxerre-2026-11-21",
+        "home": "موناكو",
+        "away": "أوكسير",
+        "league": "ligue-1",
+        "league_name": "الدوري الفرنسي",
+        "date": "2026-11-21",
+        "source": "ESPN (site.api.espn.com) — 21 نونبر 2026",
+        "venue": "ملعب لويس الثاني، موناكو",
+        "channel": "beIN Sports",
+        "time": "20:45",
+        "status": "scheduled"
+      },
+      {
+        "id": "lens-toulouse-2026-11-21",
+        "home": "لانس",
+        "away": "تولوز",
+        "league": "ligue-1",
+        "league_name": "الدوري الفرنسي",
+        "date": "2026-11-21",
+        "source": "ESPN (site.api.espn.com) — 21 نونبر 2026",
+        "venue": "ملعب بولارت ديليليس، لنس",
+        "channel": "beIN Sports",
+        "time": "20:45",
+        "status": "scheduled"
       },
       {
         "id": "lille-lyon-2026-11-21",
@@ -1944,64 +2129,37 @@ const FALLBACK = {
         "league": "ligue-1",
         "league_name": "الدوري الفرنسي",
         "date": "2026-11-21",
-        "time": "20:45",
-        "status": "scheduled",
-        "source": "vavel.com (14:45 ET = 19:45 UTC)",
+        "source": "ESPN (site.api.espn.com) — 21 نونبر 2026",
         "venue": "ملعب بيير موروا، ليل",
-        "channel": "beIN Sports"
+        "channel": "beIN Sports",
+        "time": "20:45",
+        "status": "scheduled"
       },
       {
-        "id": "hull-brighton-2026-11-22",
-        "home": "هال سيتي",
-        "away": "برايتون",
-        "league": "premier-league",
-        "league_name": "الدوري الإنجليزي",
-        "date": "2026-11-22",
-        "time": "15:00",
-        "status": "scheduled",
-        "source": "livescore.in (06:00 PT = 14:00 UTC)",
-        "venue": "ملعب MKM، هال",
-        "channel": "beIN Sports"
+        "id": "strasbourg-brest-2026-11-21",
+        "home": "ستراسبورغ",
+        "away": "بريست",
+        "league": "ligue-1",
+        "league_name": "الدوري الفرنسي",
+        "date": "2026-11-21",
+        "source": "ESPN (site.api.espn.com) — 21 نونبر 2026",
+        "venue": "ملعب لامينو، ستراسبورغ",
+        "channel": "beIN Sports",
+        "time": "20:45",
+        "status": "scheduled"
       },
       {
-        "id": "liverpool-manutd-2026-11-22",
-        "home": "ليفربول",
-        "away": "مانشستر يونايتد",
-        "league": "premier-league",
-        "league_name": "الدوري الإنجليزي",
-        "date": "2026-11-22",
-        "time": "18:30",
-        "status": "scheduled",
-        "source": "premierleague.com + nbcsports.com (16:30 UK)",
-        "venue": "أنفيلد، ليفربول",
-        "channel": "beIN Sports"
-      },
-      {
-        "id": "barcelona-villarreal-2026-11-22",
-        "home": "برشلونة",
-        "away": "فياريال",
+        "id": "real-madrid-celta-vigo-2026-11-21",
+        "home": "ريال مدريد",
+        "away": "سيلتا فيغو",
         "league": "la-liga",
         "league_name": "الدوري الإسباني",
-        "date": "2026-11-22",
-        "time": null,
-        "status": "scheduled",
-        "source": "laligatable.co (المباراة المقبلة لبرشلونة — التوقيت قيد التأكيد)",
-        "venue_note": "قيد التحقق — كامب نو أو ملعب لويس كومبانيس الأولمبي (مونتجويك)",
-        "channel": "beIN Sports"
-      },
-      {
-        "id": "atalanta-inter-2026-11-22",
-        "home": "أتالانتا",
-        "away": "إنتر ميلان",
-        "league": "serie-a",
-        "league_name": "الدوري الإيطالي",
-        "date": "2026-11-22",
-        "time": null,
-        "status": "scheduled",
-        "source": "showupandplay.com (عطلة نهاية الأسبوع 21–23 نونبر — اليوم الدقيق قيد التأكيد)",
-        "date_label": "21–23 نونبر 2026",
-        "venue": "ملعب غيويس، بيرغامو",
-        "channel": "beIN Sports"
+        "date": "2026-11-21",
+        "source": "ESPN (site.api.espn.com) — 21 نونبر 2026",
+        "venue": "سانتياغو برنابيو، مدريد",
+        "channel": "beIN Sports",
+        "time": "21:00",
+        "status": "scheduled"
       },
       {
         "id": "juventus-venezia-2026-11-22",
@@ -2010,202 +2168,2361 @@ const FALLBACK = {
         "league": "serie-a",
         "league_name": "الدوري الإيطالي",
         "date": "2026-11-22",
-        "time": null,
-        "status": "scheduled",
-        "source": "منشور فيسبوك FAFG (عطلة نهاية الأسبوع 21–23 نونبر — اليوم الدقيق قيد التأكيد)",
-        "date_label": "21–23 نونبر 2026",
+        "source": "ESPN (site.api.espn.com) — 22 نونبر 2026",
         "venue": "أليانز ستاديوم، تورينو",
-        "channel": "beIN Sports"
+        "channel": "beIN Sports",
+        "time": "12:30",
+        "status": "scheduled"
+      },
+      {
+        "id": "barcelona-villarreal-2026-11-22",
+        "home": "برشلونة",
+        "away": "فياريال",
+        "league": "la-liga",
+        "league_name": "الدوري الإسباني",
+        "date": "2026-11-22",
+        "source": "ESPN (site.api.espn.com) — 22 نونبر 2026",
+        "venue": "كامب نو، برشلونة",
+        "channel": "beIN Sports",
+        "time": "14:00",
+        "status": "scheduled"
+      },
+      {
+        "id": "hull-city-brighton-2026-11-22",
+        "home": "هال سيتي",
+        "away": "برايتون",
+        "league": "premier-league",
+        "league_name": "الدوري الإنجليزي الممتاز",
+        "date": "2026-11-22",
+        "source": "ESPN (site.api.espn.com) — 22 نونبر 2026",
+        "venue": "ملعب MKM، هال",
+        "channel": "beIN Sports",
+        "time": "15:00",
+        "status": "scheduled"
+      },
+      {
+        "id": "bologna-udinese-2026-11-22",
+        "home": "بولونيا",
+        "away": "أودينيزي",
+        "league": "serie-a",
+        "league_name": "الدوري الإيطالي",
+        "date": "2026-11-22",
+        "source": "ESPN (site.api.espn.com) — 22 نونبر 2026",
+        "venue": "ملعب ريناتو دالارا، بولونيا",
+        "channel": "beIN Sports",
+        "time": "15:00",
+        "status": "scheduled"
+      },
+      {
+        "id": "sassuolo-genoa-2026-11-22",
+        "home": "ساسولو",
+        "away": "جنوى",
+        "league": "serie-a",
+        "league_name": "الدوري الإيطالي",
+        "date": "2026-11-22",
+        "source": "ESPN (site.api.espn.com) — 22 نونبر 2026",
+        "venue": "ملعب مابي، ريجيو إميليا",
+        "channel": "beIN Sports",
+        "time": "15:00",
+        "status": "scheduled"
+      },
+      {
+        "id": "paris-fc-angers-2026-11-22",
+        "home": "باريس إف سي",
+        "away": "أنجيه",
+        "league": "ligue-1",
+        "league_name": "الدوري الفرنسي",
+        "date": "2026-11-22",
+        "source": "ESPN (site.api.espn.com) — 22 نونبر 2026",
+        "venue": "ملعب جان بوان، باريس",
+        "channel": "beIN Sports",
+        "time": "15:00",
+        "status": "scheduled"
+      },
+      {
+        "id": "augsburg-mainz-2026-11-22",
+        "home": "أوغسبورغ",
+        "away": "ماينز",
+        "league": "bundesliga",
+        "league_name": "الدوري الألماني",
+        "date": "2026-11-22",
+        "source": "ESPN (site.api.espn.com) — 22 نونبر 2026",
+        "venue": "ملعب WWK، أوغسبورغ",
+        "channel": "beIN Sports",
+        "time": "15:30",
+        "status": "scheduled"
+      },
+      {
+        "id": "racing-santander-real-sociedad-2026-11-22",
+        "home": "راسينغ سانتاندير",
+        "away": "ريال سوسيداد",
+        "league": "la-liga",
+        "league_name": "الدوري الإسباني",
+        "date": "2026-11-22",
+        "source": "ESPN (site.api.espn.com) — 22 نونبر 2026",
+        "venue": "إل ساردينيرو، سانتاندير",
+        "channel": "beIN Sports",
+        "time": "16:15",
+        "status": "scheduled"
+      },
+      {
+        "id": "lorient-rennes-2026-11-22",
+        "home": "لوريان",
+        "away": "رين",
+        "league": "ligue-1",
+        "league_name": "الدوري الفرنسي",
+        "date": "2026-11-22",
+        "source": "ESPN (site.api.espn.com) — 22 نونبر 2026",
+        "venue": "ملعب موستوار، لوريان",
+        "channel": "beIN Sports",
+        "time": "17:15",
+        "status": "scheduled"
+      },
+      {
+        "id": "liverpool-manchester-united-2026-11-22",
+        "home": "ليفربول",
+        "away": "مانشستر يونايتد",
+        "league": "premier-league",
+        "league_name": "الدوري الإنجليزي الممتاز",
+        "date": "2026-11-22",
+        "source": "ESPN (site.api.espn.com) — 22 نونبر 2026",
+        "venue": "أنفيلد، ليفربول",
+        "channel": "beIN Sports",
+        "time": "17:30",
+        "status": "scheduled"
+      },
+      {
+        "id": "werder-bremen-hamburg-2026-11-22",
+        "home": "فيردر بريمن",
+        "away": "هامبورغ",
+        "league": "bundesliga",
+        "league_name": "الدوري الألماني",
+        "date": "2026-11-22",
+        "source": "ESPN (site.api.espn.com) — 22 نونبر 2026",
+        "venue": "فيزر شتاديون، بريمن",
+        "channel": "beIN Sports",
+        "time": "17:30",
+        "status": "scheduled"
+      },
+      {
+        "id": "ac-milan-frosinone-2026-11-22",
+        "home": "ميلان",
+        "away": "فروزينوني",
+        "league": "serie-a",
+        "league_name": "الدوري الإيطالي",
+        "date": "2026-11-22",
+        "source": "ESPN (site.api.espn.com) — 22 نونبر 2026",
+        "venue": "سان سيرو، ميلانو",
+        "channel": "beIN Sports",
+        "time": "18:00",
+        "status": "scheduled"
+      },
+      {
+        "id": "osasuna-malaga-2026-11-22",
+        "home": "أوساسونا",
+        "away": "ملقا",
+        "league": "la-liga",
+        "league_name": "الدوري الإسباني",
+        "date": "2026-11-22",
+        "source": "ESPN (site.api.espn.com) — 22 نونبر 2026",
+        "venue": "إل سادار، بامبلونا",
+        "channel": "beIN Sports",
+        "time": "18:30",
+        "status": "scheduled"
+      },
+      {
+        "id": "atalanta-inter-milan-2026-11-22",
+        "home": "أتالانتا",
+        "away": "إنتر ميلان",
+        "league": "serie-a",
+        "league_name": "الدوري الإيطالي",
+        "date": "2026-11-22",
+        "source": "ESPN (site.api.espn.com) — 22 نونبر 2026",
+        "venue": "ملعب نيو بالانس أرينا، لايبزيغ",
+        "channel": "beIN Sports",
+        "time": "20:45",
+        "status": "scheduled"
+      },
+      {
+        "id": "marseille-le-mans-2026-11-22",
+        "home": "مارسيليا",
+        "away": "لومان",
+        "league": "ligue-1",
+        "league_name": "الدوري الفرنسي",
+        "date": "2026-11-22",
+        "source": "ESPN (site.api.espn.com) — 22 نونبر 2026",
+        "venue": "ملعب فيلودروم، مارسيليا",
+        "channel": "beIN Sports",
+        "time": "20:45",
+        "status": "scheduled"
+      },
+      {
+        "id": "getafe-atletico-madrid-2026-11-22",
+        "home": "خيتافي",
+        "away": "أتلتيكو مدريد",
+        "league": "la-liga",
+        "league_name": "الدوري الإسباني",
+        "date": "2026-11-22",
+        "source": "ESPN (site.api.espn.com) — 22 نونبر 2026",
+        "venue": "ملعب كوليسيوم، خيتافي",
+        "channel": "beIN Sports",
+        "time": "21:00",
+        "status": "scheduled"
+      },
+      {
+        "id": "monza-fiorentina-2026-11-23",
+        "home": "مونزا",
+        "away": "فيورنتينا",
+        "league": "serie-a",
+        "league_name": "الدوري الإيطالي",
+        "date": "2026-11-23",
+        "source": "ESPN (site.api.espn.com) — 23 نونبر 2026",
+        "venue": "ملعب يو باور، مونزا",
+        "channel": "beIN Sports",
+        "time": "20:45",
+        "status": "scheduled"
       },
       {
         "id": "brentford-everton-2026-11-23",
         "home": "برينتفورد",
         "away": "إيفرتون",
         "league": "premier-league",
-        "league_name": "الدوري الإنجليزي",
+        "league_name": "الدوري الإنجليزي الممتاز",
         "date": "2026-11-23",
-        "time": "21:00",
-        "status": "scheduled",
-        "source": "livescore.in (12:00 PT = 20:00 UTC)",
+        "source": "ESPN (site.api.espn.com) — 23 نونبر 2026",
         "venue": "ملعب جيتك كوميونيتي، لندن",
-        "channel": "beIN Sports"
+        "channel": "beIN Sports",
+        "time": "21:00",
+        "status": "scheduled"
+      },
+      {
+        "id": "levante-elche-cf-2026-11-23",
+        "home": "ليفانتي",
+        "away": "إلتشي",
+        "league": "la-liga",
+        "league_name": "الدوري الإسباني",
+        "date": "2026-11-23",
+        "source": "ESPN (site.api.espn.com) — 23 نونبر 2026",
+        "venue": "ملعب سيوتات دي فالنسيا، فالنسيا",
+        "channel": "beIN Sports",
+        "time": "21:00",
+        "status": "scheduled"
+      },
+      {
+        "id": "codm-rcaz-2026-11-27",
+        "home": "النادي المكناسي",
+        "away": "نهضة الزمامرة",
+        "league": "botola",
+        "league_name": "البطولة المغربية",
+        "date": "2026-11-27",
+        "time": "قيد التأكيد",
+        "status": "scheduled",
+        "source": "LNFP عبر h24info.ma (9 نونبر 2026) — الاستئناف 27 نونبر؛ التوقيت الدقيق قيد التأكيد",
+        "venue": "قيد التأكيد",
+        "channel": "Arryadia TNT"
+      },
+      {
+        "id": "usat-mat-2026-11-27",
+        "home": "أمل تيزنيت",
+        "away": "المغرب التطواني",
+        "league": "botola",
+        "league_name": "البطولة المغربية",
+        "date": "2026-11-27",
+        "time": "قيد التأكيد",
+        "status": "scheduled",
+        "source": "LNFP عبر h24info.ma (9 نونبر 2026) — الاستئناف 27 نونبر؛ التوقيت الدقيق قيد التأكيد",
+        "venue": "قيد التأكيد",
+        "channel": "Arryadia TNT"
+      },
+      {
+        "id": "uts-kacm-2026-11-27",
+        "home": "اتحاد تواركة",
+        "away": "الكوكب المراكشي",
+        "league": "botola",
+        "league_name": "البطولة المغربية",
+        "date": "2026-11-27",
+        "time": "قيد التأكيد",
+        "status": "scheduled",
+        "source": "LNFP عبر h24info.ma (9 نونبر 2026) — الاستئناف 27 نونبر؛ التوقيت الدقيق قيد التأكيد",
+        "venue": "قيد التأكيد",
+        "channel": "Arryadia TNT"
+      },
+      {
+        "id": "irt-husa-2026-11-27",
+        "home": "اتحاد طنجة",
+        "away": "حسنية أكادير",
+        "league": "botola",
+        "league_name": "البطولة المغربية",
+        "date": "2026-11-27",
+        "time": "قيد التأكيد",
+        "status": "scheduled",
+        "source": "LNFP عبر h24info.ma (9 نونبر 2026) — الاستئناف 27 نونبر؛ التوقيت الدقيق قيد التأكيد",
+        "venue": "قيد التأكيد",
+        "channel": "Arryadia TNT"
+      },
+      {
+        "id": "wydad-far-2026-11-27",
+        "home": "الوداد الرياضي",
+        "away": "الجيش الملكي",
+        "league": "botola",
+        "league_name": "البطولة المغربية",
+        "date": "2026-11-27",
+        "time": "مؤجلة",
+        "status": "postponed",
+        "source": "LNFP عبر h24info.ma (9 نونبر 2026) — مؤجلة بسبب المشاركات الإفريقية (CAF 27–29 نونبر)",
+        "venue": "قيد التأكيد",
+        "channel": "Arryadia TNT"
+      },
+      {
+        "id": "berkane-fus-2026-11-27",
+        "home": "نهضة بركان",
+        "away": "الفتح الرباطي",
+        "league": "botola",
+        "league_name": "البطولة المغربية",
+        "date": "2026-11-27",
+        "time": "مؤجلة",
+        "status": "postponed",
+        "source": "LNFP عبر h24info.ma (9 نونبر 2026) — مؤجلة بسبب المشاركات الإفريقية (CAF 27–29 نونبر)",
+        "venue": "قيد التأكيد",
+        "channel": "Arryadia TNT"
+      },
+      {
+        "id": "dhj-mas-2026-11-27",
+        "home": "الدفاع الحسني الجديدي",
+        "away": "المغرب الفاسي",
+        "league": "botola",
+        "league_name": "البطولة المغربية",
+        "date": "2026-11-27",
+        "time": "مؤجلة",
+        "status": "postponed",
+        "source": "LNFP عبر h24info.ma (9 نونبر 2026) — مؤجلة بسبب المشاركات الإفريقية (CAF 27–29 نونبر)",
+        "venue": "قيد التأكيد",
+        "channel": "Arryadia TNT"
+      },
+      {
+        "id": "temara-raja-2026-11-27",
+        "home": "وداد تمارة",
+        "away": "الرجاء الرياضي",
+        "league": "botola",
+        "league_name": "البطولة المغربية",
+        "date": "2026-11-27",
+        "time": "مؤجلة",
+        "status": "postponed",
+        "source": "LNFP عبر h24info.ma (9 نونبر 2026) — مؤجلة بسبب المشاركات الإفريقية (CAF 27–29 نونبر)",
+        "venue": "قيد التأكيد",
+        "channel": "Arryadia TNT"
       }
     ],
     "results": [
       {
-        "id": "mainz-bayern-2026-11-08",
-        "home": "ماينز",
-        "away": "بايرن ميونيخ",
-        "home_goals": 1,
-        "away_goals": 2,
-        "league": "bundesliga",
-        "league_name": "الدوري الألماني",
+        "id": "brighton-brentford-2026-11-08",
+        "home": "برايتون",
+        "away": "برينتفورد",
+        "league": "premier-league",
+        "league_name": "الدوري الإنجليزي الممتاز",
         "date": "2026-11-08",
+        "source": "ESPN (site.api.espn.com) — 8 نونبر 2026",
+        "venue": "ملعب أميكس، برايتون",
+        "channel": "beIN Sports",
+        "home_goals": 2,
+        "away_goals": 0,
         "status": "finished",
-        "source": "showupandplay.com (تقرير 08 نونبر 2026)",
         "stats": {
-          "possession_home": 31,
-          "possession_away": 69,
-          "shots_home": 11,
-          "shots_away": 26,
-          "shots_on_target_home": 1,
-          "shots_on_target_away": 9,
+          "possession_home": 75,
+          "shots_home": 20,
+          "shots_on_target_home": 6,
           "corners_home": 7,
-          "corners_away": 8,
-          "source": "previaxi.com + soccerpunter.com + sportmeridian.com (18 نونبر 2026) — لعبت 07 نونبر 2026 14:30 UTC"
+          "possession_away": 24,
+          "shots_away": 5,
+          "shots_on_target_away": 0,
+          "corners_away": 3,
+          "source": "ESPN (site.api.espn.com) — 8 نونبر 2026"
         },
-        "venue": "ملعب ميوا، ماينز",
-        "channel": "beIN Sports"
+        "events": [
+          {
+            "minute": "15",
+            "team": "برايتون",
+            "player": "دييغو غوميز",
+            "type": "هدف"
+          },
+          {
+            "minute": "42",
+            "team": "برايتون",
+            "player": "باسكال غروس",
+            "type": "هدف"
+          }
+        ]
       },
       {
-        "id": "dortmund-elversberg-2026-11-08",
-        "home": "بوروسيا دورتموند",
-        "away": "إلفرسبرغ",
-        "home_goals": 2,
-        "away_goals": 1,
-        "league": "bundesliga",
-        "league_name": "الدوري الألماني",
+        "id": "crystal-palace-liverpool-2026-11-08",
+        "home": "كريستال بالاس",
+        "away": "ليفربول",
+        "league": "premier-league",
+        "league_name": "الدوري الإنجليزي الممتاز",
         "date": "2026-11-08",
+        "source": "ESPN (site.api.espn.com) — 8 نونبر 2026",
+        "venue": "سيلهرست بارك، لندن",
+        "channel": "beIN Sports",
+        "home_goals": 1,
+        "away_goals": 3,
         "status": "finished",
-        "source": "showupandplay.com (تقرير 08 نونبر 2026)",
         "stats": {
-          "possession_home": 51,
-          "possession_away": 49,
+          "possession_home": 53,
           "shots_home": 19,
-          "shots_away": 16,
-          "shots_on_target_home": 6,
-          "shots_on_target_away": 7,
-          "corners_home": 6,
-          "corners_away": 6,
-          "source": "soccerpunter.com + matchreplays.com + sportmeridian.com (18 نونبر 2026) — لعبت 07 نونبر 2026 14:30 UTC"
+          "shots_on_target_home": 7,
+          "corners_home": 4,
+          "possession_away": 46,
+          "shots_away": 20,
+          "shots_on_target_away": 8,
+          "corners_away": 7,
+          "source": "ESPN (site.api.espn.com) — 8 نونبر 2026"
         },
-        "venue": "سيغنال إيدونا بارك، دورتموند",
-        "channel": "beIN Sports"
+        "events": [
+          {
+            "minute": "40",
+            "team": "ليفربول",
+            "player": "أليكسيس ماك أليستر",
+            "type": "هدف"
+          },
+          {
+            "minute": "54",
+            "team": "ليفربول",
+            "player": "فلوريان فيرتز",
+            "type": "هدف"
+          },
+          {
+            "minute": "89",
+            "team": "ليفربول",
+            "player": "ألكسندر إيزاك",
+            "type": "هدف"
+          },
+          {
+            "minute": "90+5",
+            "team": "كريستال بالاس",
+            "player": "إيدي نكيتياه",
+            "type": "هدف"
+          }
+        ]
+      },
+      {
+        "id": "ipswich-town-bournemouth-2026-11-08",
+        "home": "إيبسويتش تاون",
+        "away": "بورنموث",
+        "league": "premier-league",
+        "league_name": "الدوري الإنجليزي الممتاز",
+        "date": "2026-11-08",
+        "source": "ESPN (site.api.espn.com) — 8 نونبر 2026",
+        "venue": "بورتمان رود، إيبسويتش",
+        "channel": "beIN Sports",
+        "home_goals": 1,
+        "away_goals": 2,
+        "status": "finished",
+        "stats": {
+          "possession_home": 55,
+          "shots_home": 10,
+          "shots_on_target_home": 2,
+          "corners_home": 2,
+          "possession_away": 44,
+          "shots_away": 15,
+          "shots_on_target_away": 4,
+          "corners_away": 7,
+          "source": "ESPN (site.api.espn.com) — 8 نونبر 2026"
+        },
+        "events": [
+          {
+            "minute": "5",
+            "team": "بورنموث",
+            "player": "إيفانيلسون",
+            "type": "هدف"
+          },
+          {
+            "minute": "46",
+            "team": "بورنموث",
+            "player": "ليف ديفيس",
+            "type": "هدف"
+          },
+          {
+            "minute": "73",
+            "team": "إيبسويتش تاون",
+            "player": "جاك كلارك",
+            "type": "هدف"
+          }
+        ]
+      },
+      {
+        "id": "sunderland-chelsea-2026-11-08",
+        "home": "سندرلاند",
+        "away": "تشيلسي",
+        "league": "premier-league",
+        "league_name": "الدوري الإنجليزي الممتاز",
+        "date": "2026-11-08",
+        "source": "ESPN (site.api.espn.com) — 8 نونبر 2026",
+        "venue": "ملعب النور، سندرلاند",
+        "channel": "beIN Sports",
+        "home_goals": 1,
+        "away_goals": 0,
+        "status": "finished",
+        "stats": {
+          "possession_home": 31,
+          "shots_home": 9,
+          "shots_on_target_home": 2,
+          "corners_home": 2,
+          "possession_away": 68,
+          "shots_away": 10,
+          "shots_on_target_away": 4,
+          "corners_away": 2,
+          "source": "ESPN (site.api.espn.com) — 8 نونبر 2026"
+        },
+        "events": [
+          {
+            "minute": "36",
+            "team": "سندرلاند",
+            "player": "إنزو لوفيه",
+            "type": "هدف"
+          }
+        ]
+      },
+      {
+        "id": "manchester-united-aston-villa-2026-11-08",
+        "home": "مانشستر يونايتد",
+        "away": "أستون فيلا",
+        "league": "premier-league",
+        "league_name": "الدوري الإنجليزي الممتاز",
+        "date": "2026-11-08",
+        "source": "ESPN (site.api.espn.com) — 8 نونبر 2026",
+        "venue": "أولد ترافورد، مانشستر",
+        "channel": "beIN Sports",
+        "home_goals": 4,
+        "away_goals": 4,
+        "status": "finished",
+        "stats": {
+          "possession_home": 55,
+          "shots_home": 26,
+          "shots_on_target_home": 9,
+          "corners_home": 8,
+          "possession_away": 44,
+          "shots_away": 12,
+          "shots_on_target_away": 6,
+          "corners_away": 1,
+          "source": "ESPN (site.api.espn.com) — 8 نونبر 2026"
+        },
+        "events": [
+          {
+            "minute": "1",
+            "team": "أستون فيلا",
+            "player": "أليسون",
+            "type": "هدف"
+          },
+          {
+            "minute": "4",
+            "team": "أستون فيلا",
+            "player": "نيكولاس جاكسون",
+            "type": "هدف"
+          },
+          {
+            "minute": "16",
+            "team": "مانشستر يونايتد",
+            "player": "برونو فيرنانديز",
+            "type": "هدف"
+          },
+          {
+            "minute": "44",
+            "team": "مانشستر يونايتد",
+            "player": "يوري تيليمانس",
+            "type": "هدف"
+          },
+          {
+            "minute": "48",
+            "team": "أستون فيلا",
+            "player": "جون ماكغين",
+            "type": "هدف"
+          },
+          {
+            "minute": "53",
+            "team": "أستون فيلا",
+            "player": "ليون غوريتزكا",
+            "type": "هدف"
+          },
+          {
+            "minute": "90+2",
+            "team": "مانشستر يونايتد",
+            "player": "جوشوا زيركزي",
+            "type": "هدف"
+          },
+          {
+            "minute": "90+6",
+            "team": "مانشستر يونايتد",
+            "player": "باتريك دورغو",
+            "type": "هدف"
+          }
+        ]
+      },
+      {
+        "id": "elche-cf-real-betis-2026-11-08",
+        "home": "إلتشي",
+        "away": "ريال بيتيس",
+        "league": "la-liga",
+        "league_name": "الدوري الإسباني",
+        "date": "2026-11-08",
+        "source": "ESPN (site.api.espn.com) — 8 نونبر 2026",
+        "venue": "ملعب مارتينيز فاليرو، إلتشي",
+        "channel": "beIN Sports",
+        "home_goals": 0,
+        "away_goals": 2,
+        "status": "finished",
+        "stats": {
+          "possession_home": 47,
+          "shots_home": 13,
+          "shots_on_target_home": 1,
+          "corners_home": 9,
+          "possession_away": 52,
+          "shots_away": 18,
+          "shots_on_target_away": 9,
+          "corners_away": 8,
+          "source": "ESPN (site.api.espn.com) — 8 نونبر 2026"
+        },
+        "events": [
+          {
+            "minute": "81",
+            "team": "ريال بيتيس",
+            "player": "رودريغو ريكيلمي",
+            "type": "هدف"
+          },
+          {
+            "minute": "89",
+            "team": "ريال بيتيس",
+            "player": "مارك بارترا",
+            "type": "هدف"
+          }
+        ]
+      },
+      {
+        "id": "real-sociedad-rayo-vallecano-2026-11-08",
+        "home": "ريال سوسيداد",
+        "away": "رايو فايكانو",
+        "league": "la-liga",
+        "league_name": "الدوري الإسباني",
+        "date": "2026-11-08",
+        "source": "ESPN (site.api.espn.com) — 8 نونبر 2026",
+        "venue": "ريالي أرينا، سان سيباستيان",
+        "channel": "beIN Sports",
+        "home_goals": 1,
+        "away_goals": 0,
+        "status": "finished",
+        "stats": {
+          "possession_home": 50,
+          "shots_home": 17,
+          "shots_on_target_home": 3,
+          "corners_home": 7,
+          "possession_away": 49,
+          "shots_away": 11,
+          "shots_on_target_away": 3,
+          "corners_away": 6,
+          "source": "ESPN (site.api.espn.com) — 8 نونبر 2026"
+        },
+        "events": [
+          {
+            "minute": "67",
+            "team": "ريال سوسيداد",
+            "player": "أوري أوسكارسون",
+            "type": "هدف"
+          }
+        ]
+      },
+      {
+        "id": "celta-vigo-levante-2026-11-08",
+        "home": "سيلتا فيغو",
+        "away": "ليفانتي",
+        "league": "la-liga",
+        "league_name": "الدوري الإسباني",
+        "date": "2026-11-08",
+        "source": "ESPN (site.api.espn.com) — 8 نونبر 2026",
+        "venue": "بالايدوس، فيغو",
+        "channel": "beIN Sports",
+        "home_goals": 0,
+        "away_goals": 0,
+        "status": "finished",
+        "stats": {
+          "possession_home": 58,
+          "shots_home": 23,
+          "shots_on_target_home": 8,
+          "corners_home": 6,
+          "possession_away": 41,
+          "shots_away": 6,
+          "shots_on_target_away": 0,
+          "corners_away": 1,
+          "source": "ESPN (site.api.espn.com) — 8 نونبر 2026"
+        }
+      },
+      {
+        "id": "villarreal-getafe-2026-11-08",
+        "home": "فياريال",
+        "away": "خيتافي",
+        "league": "la-liga",
+        "league_name": "الدوري الإسباني",
+        "date": "2026-11-08",
+        "source": "ESPN (site.api.espn.com) — 8 نونبر 2026",
+        "venue": "ملعب لا سيراميكا، فياريال",
+        "channel": "beIN Sports",
+        "home_goals": 2,
+        "away_goals": 0,
+        "status": "finished",
+        "stats": {
+          "possession_home": 72,
+          "shots_home": 22,
+          "shots_on_target_home": 7,
+          "corners_home": 9,
+          "possession_away": 27,
+          "shots_away": 9,
+          "shots_on_target_away": 1,
+          "corners_away": 4,
+          "source": "ESPN (site.api.espn.com) — 8 نونبر 2026"
+        },
+        "events": [
+          {
+            "minute": "80",
+            "team": "فياريال",
+            "player": "تاجون بوكانان",
+            "type": "هدف"
+          },
+          {
+            "minute": "90+1",
+            "team": "فياريال",
+            "player": "كارلوس روميرو",
+            "type": "هدف"
+          }
+        ]
+      },
+      {
+        "id": "atletico-madrid-barcelona-2026-11-08",
+        "home": "أتلتيكو مدريد",
+        "away": "برشلونة",
+        "league": "la-liga",
+        "league_name": "الدوري الإسباني",
+        "date": "2026-11-08",
+        "source": "ESPN (site.api.espn.com) — 8 نونبر 2026",
+        "venue": "ملعب ميتروبوليتانو، مدريد",
+        "channel": "beIN Sports",
+        "home_goals": 1,
+        "away_goals": 2,
+        "status": "finished",
+        "stats": {
+          "possession_home": 37,
+          "shots_home": 9,
+          "shots_on_target_home": 4,
+          "corners_home": 4,
+          "possession_away": 63,
+          "shots_away": 19,
+          "shots_on_target_away": 4,
+          "corners_away": 2,
+          "source": "ESPN (site.api.espn.com) — 8 نونبر 2026"
+        },
+        "events": [
+          {
+            "minute": "10",
+            "team": "أتلتيكو مدريد",
+            "player": "جوليانو سيميوني",
+            "type": "هدف"
+          },
+          {
+            "minute": "45",
+            "team": "برشلونة",
+            "player": "فيرمين لوبيز",
+            "type": "هدف"
+          },
+          {
+            "minute": "66",
+            "team": "برشلونة",
+            "player": "فيرمين لوبيز",
+            "type": "هدف"
+          }
+        ]
       },
       {
         "id": "napoli-lazio-2026-11-08",
         "home": "نابولي",
         "away": "لاتسيو",
+        "league": "serie-a",
+        "league_name": "الدوري الإيطالي",
+        "date": "2026-11-08",
+        "source": "ESPN (site.api.espn.com) — 8 نونبر 2026",
+        "venue": "ملعب دييغو أرماندو مارادونا، نابولي",
+        "channel": "beIN Sports",
         "home_goals": 1,
         "away_goals": 1,
-        "league": "serie-a",
-        "league_name": "الدوري الإيطالي",
-        "date": "2026-11-08",
         "status": "finished",
-        "source": "showupandplay.com (تقرير 08 نونبر 2026)",
         "stats": {
           "possession_home": 49,
-          "possession_away": 51,
           "shots_home": 15,
-          "shots_away": 15,
           "shots_on_target_home": 6,
-          "shots_on_target_away": 6,
           "corners_home": 6,
+          "possession_away": 51,
+          "shots_away": 15,
+          "shots_on_target_away": 6,
           "corners_away": 6,
-          "source": "skysports.com + moneyball-odds.com + yardbarker.com (18 نونبر 2026)"
+          "source": "ESPN (site.api.espn.com) — 8 نونبر 2026"
         },
-        "venue": "ملعب دييغو أرماندو مارادونا، نابولي",
-        "channel": "beIN Sports"
+        "events": [
+          {
+            "minute": "28",
+            "team": "لاتسيو",
+            "player": "دافيدي فراتيزي",
+            "type": "هدف"
+          },
+          {
+            "minute": "48",
+            "team": "نابولي",
+            "player": "ألفونسو بيدرازا",
+            "type": "هدف"
+          }
+        ]
       },
       {
-        "id": "inter-como-2026-11-08",
-        "home": "إنتر ميلان",
-        "away": "كومو",
-        "home_goals": 2,
-        "away_goals": 0,
-        "league": "serie-a",
-        "league_name": "الدوري الإيطالي",
-        "date": "2026-11-08",
-        "status": "finished",
-        "source": "showupandplay.com (تقرير 08 نونبر 2026)",
-        "stats": {
-          "possession_home": 43,
-          "possession_away": 57,
-          "shots_home": 14,
-          "shots_away": 5,
-          "shots_on_target_home": 4,
-          "shots_on_target_away": 1,
-          "corners_home": 4,
-          "corners_away": 2,
-          "source": "skysports.com + pitchlabstats.com + moneyball-odds.com (18 نونبر 2026)"
-        },
-        "venue": "سان سيرو، ميلانو",
-        "channel": "beIN Sports"
-      },
-      {
-        "id": "roma-sassuolo-2026-11-08",
-        "home": "روما",
-        "away": "ساسولو",
-        "home_goals": 3,
-        "away_goals": 0,
-        "league": "serie-a",
-        "league_name": "الدوري الإيطالي",
-        "date": "2026-11-08",
-        "status": "finished",
-        "source": "showupandplay.com (تقرير 08 نونبر 2026)",
-        "stats": {
-          "possession_home": 65,
-          "possession_away": 35,
-          "shots_home": 28,
-          "shots_away": 6,
-          "shots_on_target_home": 9,
-          "shots_on_target_away": 1,
-          "corners_home": 12,
-          "corners_away": 1,
-          "source": "espn.ph + mykhel.com + soccerpunter.com (18 نونبر 2026) — لعبت 07 نونبر 2026 19:45 UTC"
-        },
-        "venue": "الملعب الأولمبي، روما",
-        "channel": "beIN Sports"
-      },
-      {
-        "id": "genoa-milan-2026-11-08",
+        "id": "genoa-ac-milan-2026-11-08",
         "home": "جنوى",
         "away": "ميلان",
-        "home_goals": 1,
-        "away_goals": 2,
         "league": "serie-a",
         "league_name": "الدوري الإيطالي",
         "date": "2026-11-08",
-        "status": "finished",
-        "source": "showupandplay.com (تقرير 08 نونبر 2026)",
-        "stats": {
-          "possession_home": 38,
-          "possession_away": 62,
-          "shots_home": 17,
-          "shots_away": 6,
-          "shots_on_target_home": 5,
-          "shots_on_target_away": 2,
-          "corners_home": 3,
-          "corners_away": 0,
-          "source": "skysports.com + moneyball-odds.com + livescore.com (18 نونبر 2026)"
-        },
+        "source": "ESPN (site.api.espn.com) — 8 نونبر 2026",
         "venue": "ملعب لويجي فيراريس، جنوى",
-        "channel": "beIN Sports"
+        "channel": "beIN Sports",
+        "home_goals": 1,
+        "away_goals": 2,
+        "status": "finished",
+        "stats": {
+          "possession_home": 37,
+          "shots_home": 17,
+          "shots_on_target_home": 5,
+          "corners_home": 3,
+          "possession_away": 62,
+          "shots_away": 6,
+          "shots_on_target_away": 2,
+          "corners_away": 0,
+          "source": "ESPN (site.api.espn.com) — 8 نونبر 2026"
+        },
+        "events": [
+          {
+            "minute": "13",
+            "team": "ميلان",
+            "player": "ألفادجو سيسيه",
+            "type": "هدف"
+          },
+          {
+            "minute": "19",
+            "team": "ميلان",
+            "player": "كريستيان بوليسيتش",
+            "type": "هدف"
+          },
+          {
+            "minute": "88",
+            "team": "جنوى",
+            "player": "ميكائيل إليرتسون",
+            "type": "هدف"
+          }
+        ]
+      },
+      {
+        "id": "monza-atalanta-2026-11-08",
+        "home": "مونزا",
+        "away": "أتالانتا",
+        "league": "serie-a",
+        "league_name": "الدوري الإيطالي",
+        "date": "2026-11-08",
+        "source": "ESPN (site.api.espn.com) — 8 نونبر 2026",
+        "venue": "ملعب يو باور، مونزا",
+        "channel": "beIN Sports",
+        "home_goals": 0,
+        "away_goals": 1,
+        "status": "finished",
+        "stats": {
+          "possession_home": 48,
+          "shots_home": 22,
+          "shots_on_target_home": 7,
+          "corners_home": 7,
+          "possession_away": 51,
+          "shots_away": 13,
+          "shots_on_target_away": 7,
+          "corners_away": 2,
+          "source": "ESPN (site.api.espn.com) — 8 نونبر 2026"
+        },
+        "events": [
+          {
+            "minute": "49",
+            "team": "أتالانتا",
+            "player": "نيكولا كرستوفيتش",
+            "type": "هدف"
+          }
+        ]
+      },
+      {
+        "id": "inter-milan-como-2026-11-08",
+        "home": "إنتر ميلان",
+        "away": "كومو",
+        "league": "serie-a",
+        "league_name": "الدوري الإيطالي",
+        "date": "2026-11-08",
+        "source": "ESPN (site.api.espn.com) — 8 نونبر 2026",
+        "venue": "سان سيرو، ميلانو",
+        "channel": "beIN Sports",
+        "home_goals": 2,
+        "away_goals": 0,
+        "status": "finished",
+        "stats": {
+          "possession_home": 43,
+          "shots_home": 14,
+          "shots_on_target_home": 4,
+          "corners_home": 4,
+          "possession_away": 57,
+          "shots_away": 5,
+          "shots_on_target_away": 1,
+          "corners_away": 2,
+          "source": "ESPN (site.api.espn.com) — 8 نونبر 2026"
+        },
+        "events": [
+          {
+            "minute": "12",
+            "team": "إنتر ميلان",
+            "player": "بيو إسبوزيتو",
+            "type": "هدف"
+          },
+          {
+            "minute": "19",
+            "team": "إنتر ميلان",
+            "player": "ماركوس تورام",
+            "type": "هدف"
+          }
+        ]
       },
       {
         "id": "fiorentina-juventus-2026-11-08",
         "home": "فيورنتينا",
         "away": "يوفنتوس",
-        "home_goals": 2,
-        "away_goals": 2,
         "league": "serie-a",
         "league_name": "الدوري الإيطالي",
         "date": "2026-11-08",
+        "source": "ESPN (site.api.espn.com) — 8 نونبر 2026",
+        "venue": "ملعب أرتيميو فرانكي، فلورنسا",
+        "channel": "beIN Sports",
+        "home_goals": 2,
+        "away_goals": 2,
         "status": "finished",
-        "source": "showupandplay.com (تقرير 08 نونبر 2026)",
         "stats": {
           "possession_home": 41,
-          "possession_away": 59,
           "shots_home": 22,
-          "shots_away": 18,
           "shots_on_target_home": 6,
-          "shots_on_target_away": 6,
           "corners_home": 5,
+          "possession_away": 58,
+          "shots_away": 18,
+          "shots_on_target_away": 6,
           "corners_away": 12,
-          "source": "skysports.com + soccerway.com + flashscore.com (18 نونبر 2026)"
+          "source": "ESPN (site.api.espn.com) — 8 نونبر 2026"
         },
-        "venue": "ملعب أرتيميو فرانكي، فلورنسا",
-        "channel": "beIN Sports"
+        "events": [
+          {
+            "minute": "4",
+            "team": "فيورنتينا",
+            "player": "ماتيو بيليغرينو",
+            "type": "هدف"
+          },
+          {
+            "minute": "32",
+            "team": "يوفنتوس",
+            "player": "نيك فولتيمادي",
+            "type": "هدف"
+          },
+          {
+            "minute": "54",
+            "team": "فيورنتينا",
+            "player": "أليو نجي",
+            "type": "هدف"
+          },
+          {
+            "minute": "66",
+            "team": "يوفنتوس",
+            "player": "بريمر",
+            "type": "هدف"
+          }
+        ]
+      },
+      {
+        "id": "koln-bayer-leverkusen-2026-11-08",
+        "home": "كولن",
+        "away": "باير ليفركوزن",
+        "league": "bundesliga",
+        "league_name": "الدوري الألماني",
+        "date": "2026-11-08",
+        "source": "ESPN (site.api.espn.com) — 8 نونبر 2026",
+        "venue": "ملعب راين إنرجي، كولن",
+        "channel": "beIN Sports",
+        "home_goals": 1,
+        "away_goals": 2,
+        "status": "finished",
+        "stats": {
+          "possession_home": 38,
+          "shots_home": 12,
+          "shots_on_target_home": 6,
+          "corners_home": 2,
+          "possession_away": 61,
+          "shots_away": 14,
+          "shots_on_target_away": 8,
+          "corners_away": 6,
+          "source": "ESPN (site.api.espn.com) — 8 نونبر 2026"
+        },
+        "events": [
+          {
+            "minute": "7",
+            "team": "باير ليفركوزن",
+            "player": "أليكس غارسيا",
+            "type": "هدف"
+          },
+          {
+            "minute": "85",
+            "team": "باير ليفركوزن",
+            "player": "باتريك شيك",
+            "type": "هدف"
+          },
+          {
+            "minute": "90+2",
+            "team": "كولن",
+            "player": "سعيد المالا",
+            "type": "هدف"
+          }
+        ]
+      },
+      {
+        "id": "freiburg-union-berlin-2026-11-08",
+        "home": "فرايبورغ",
+        "away": "يونيون برلين",
+        "league": "bundesliga",
+        "league_name": "الدوري الألماني",
+        "date": "2026-11-08",
+        "source": "ESPN (site.api.espn.com) — 8 نونبر 2026",
+        "venue": "ملعب أوروبا بارك، فرايبورغ",
+        "channel": "beIN Sports",
+        "home_goals": 2,
+        "away_goals": 0,
+        "status": "finished",
+        "stats": {
+          "possession_home": 59,
+          "shots_home": 20,
+          "shots_on_target_home": 9,
+          "corners_home": 5,
+          "possession_away": 40,
+          "shots_away": 4,
+          "shots_on_target_away": 0,
+          "corners_away": 1,
+          "source": "ESPN (site.api.espn.com) — 8 نونبر 2026"
+        },
+        "events": [
+          {
+            "minute": "55",
+            "team": "فرايبورغ",
+            "player": "راني خضيرة",
+            "type": "هدف"
+          },
+          {
+            "minute": "67",
+            "team": "فرايبورغ",
+            "player": "يويتو سوزوكي",
+            "type": "هدف"
+          }
+        ]
+      },
+      {
+        "id": "hoffenheim-schalke-04-2026-11-08",
+        "home": "هوفنهايم",
+        "away": "شالكه",
+        "league": "bundesliga",
+        "league_name": "الدوري الألماني",
+        "date": "2026-11-08",
+        "source": "ESPN (site.api.espn.com) — 8 نونبر 2026",
+        "venue": "بريزيرو أرينا، سينسهايم",
+        "channel": "beIN Sports",
+        "home_goals": 2,
+        "away_goals": 1,
+        "status": "finished",
+        "stats": {
+          "possession_home": 48,
+          "shots_home": 15,
+          "shots_on_target_home": 7,
+          "corners_home": 6,
+          "possession_away": 51,
+          "shots_away": 23,
+          "shots_on_target_away": 6,
+          "corners_away": 4,
+          "source": "ESPN (site.api.espn.com) — 8 نونبر 2026"
+        },
+        "events": [
+          {
+            "minute": "10",
+            "team": "هوفنهايم",
+            "player": "فيسنيك أسلاني",
+            "type": "هدف"
+          },
+          {
+            "minute": "26",
+            "team": "هوفنهايم",
+            "player": "تيم ليمبيرلي",
+            "type": "هدف"
+          },
+          {
+            "minute": "81",
+            "team": "شالكه",
+            "player": "جونيور أدامو",
+            "type": "هدف"
+          }
+        ]
+      },
+      {
+        "id": "rennes-lille-2026-11-08",
+        "home": "رين",
+        "away": "ليل",
+        "league": "ligue-1",
+        "league_name": "الدوري الفرنسي",
+        "date": "2026-11-08",
+        "source": "ESPN (site.api.espn.com) — 8 نونبر 2026",
+        "venue": "روازون بارك، رين",
+        "channel": "beIN Sports",
+        "home_goals": 1,
+        "away_goals": 2,
+        "status": "finished",
+        "stats": {
+          "possession_home": 55,
+          "shots_home": 15,
+          "shots_on_target_home": 2,
+          "corners_home": 7,
+          "possession_away": 44,
+          "shots_away": 8,
+          "shots_on_target_away": 3,
+          "corners_away": 2,
+          "source": "ESPN (site.api.espn.com) — 8 نونبر 2026"
+        },
+        "events": [
+          {
+            "minute": "24",
+            "team": "ليل",
+            "player": "سوريبا دياوني",
+            "type": "هدف"
+          },
+          {
+            "minute": "31",
+            "team": "رين",
+            "player": "بولاي ديا",
+            "type": "هدف"
+          },
+          {
+            "minute": "68",
+            "team": "ليل",
+            "player": "ناثان نغوي",
+            "type": "هدف"
+          }
+        ]
+      },
+      {
+        "id": "angers-nice-2026-11-08",
+        "home": "أنجيه",
+        "away": "نيس",
+        "league": "ligue-1",
+        "league_name": "الدوري الفرنسي",
+        "date": "2026-11-08",
+        "source": "ESPN (site.api.espn.com) — 8 نونبر 2026",
+        "venue": "ملعب ريمون كوبا، أنجيه",
+        "channel": "beIN Sports",
+        "home_goals": 0,
+        "away_goals": 2,
+        "status": "finished",
+        "stats": {
+          "possession_home": 51,
+          "shots_home": 12,
+          "shots_on_target_home": 4,
+          "corners_home": 6,
+          "possession_away": 48,
+          "shots_away": 16,
+          "shots_on_target_away": 8,
+          "corners_away": 4,
+          "source": "ESPN (site.api.espn.com) — 8 نونبر 2026"
+        },
+        "events": [
+          {
+            "minute": "2",
+            "team": "نيس",
+            "player": "سفيان ديوب",
+            "type": "هدف"
+          },
+          {
+            "minute": "78",
+            "team": "نيس",
+            "player": "جوناثان كلاوس",
+            "type": "هدف"
+          }
+        ]
+      },
+      {
+        "id": "brest-lyon-2026-11-08",
+        "home": "بريست",
+        "away": "ليون",
+        "league": "ligue-1",
+        "league_name": "الدوري الفرنسي",
+        "date": "2026-11-08",
+        "source": "ESPN (site.api.espn.com) — 8 نونبر 2026",
+        "venue": "ملعب فرانسيس لو بليه، بريست",
+        "channel": "beIN Sports",
+        "home_goals": 2,
+        "away_goals": 0,
+        "status": "finished",
+        "stats": {
+          "possession_home": 31,
+          "shots_home": 13,
+          "shots_on_target_home": 6,
+          "corners_home": 1,
+          "possession_away": 68,
+          "shots_away": 10,
+          "shots_on_target_away": 2,
+          "corners_away": 8,
+          "source": "ESPN (site.api.espn.com) — 8 نونبر 2026"
+        },
+        "events": [
+          {
+            "minute": "22",
+            "team": "بريست",
+            "player": "نواه إدجوما",
+            "type": "هدف"
+          },
+          {
+            "minute": "90+4",
+            "team": "بريست",
+            "player": "لودوفيك أجورك",
+            "type": "هدف"
+          }
+        ]
+      },
+      {
+        "id": "le-havre-lorient-2026-11-08",
+        "home": "لوهافر",
+        "away": "لوريان",
+        "league": "ligue-1",
+        "league_name": "الدوري الفرنسي",
+        "date": "2026-11-08",
+        "source": "ESPN (site.api.espn.com) — 8 نونبر 2026",
+        "venue": "ملعب أوسيان، لوهافر",
+        "channel": "beIN Sports",
+        "home_goals": 0,
+        "away_goals": 2,
+        "status": "finished",
+        "stats": {
+          "possession_home": 53,
+          "shots_home": 21,
+          "shots_on_target_home": 5,
+          "corners_home": 5,
+          "possession_away": 46,
+          "shots_away": 7,
+          "shots_on_target_away": 3,
+          "corners_away": 0,
+          "source": "ESPN (site.api.espn.com) — 8 نونبر 2026"
+        },
+        "events": [
+          {
+            "minute": "18",
+            "team": "لوريان",
+            "player": "إسحاق توريه",
+            "type": "هدف"
+          },
+          {
+            "minute": "90+5",
+            "team": "لوريان",
+            "player": "جان فيكتور ماكينغو",
+            "type": "هدف"
+          }
+        ]
+      },
+      {
+        "id": "le-mans-monaco-2026-11-08",
+        "home": "لومان",
+        "away": "موناكو",
+        "league": "ligue-1",
+        "league_name": "الدوري الفرنسي",
+        "date": "2026-11-08",
+        "source": "ESPN (site.api.espn.com) — 8 نونبر 2026",
+        "venue": "ملعب ماري مارفينغ، لومان",
+        "channel": "beIN Sports",
+        "home_goals": 1,
+        "away_goals": 1,
+        "status": "finished",
+        "stats": {
+          "possession_home": 48,
+          "shots_home": 19,
+          "shots_on_target_home": 5,
+          "corners_home": 8,
+          "possession_away": 51,
+          "shots_away": 5,
+          "shots_on_target_away": 3,
+          "corners_away": 7,
+          "source": "ESPN (site.api.espn.com) — 8 نونبر 2026"
+        },
+        "events": [
+          {
+            "minute": "40",
+            "team": "موناكو",
+            "player": "مامادو كوليبالي",
+            "type": "هدف"
+          },
+          {
+            "minute": "90",
+            "team": "لومان",
+            "player": "إيروان كولاس",
+            "type": "هدف"
+          }
+        ]
+      },
+      {
+        "id": "lens-marseille-2026-11-08",
+        "home": "لانس",
+        "away": "مارسيليا",
+        "league": "ligue-1",
+        "league_name": "الدوري الفرنسي",
+        "date": "2026-11-08",
+        "source": "ESPN (site.api.espn.com) — 8 نونبر 2026",
+        "venue": "ملعب بولارت ديليليس، لنس",
+        "channel": "beIN Sports",
+        "home_goals": 1,
+        "away_goals": 2,
+        "status": "finished",
+        "stats": {
+          "possession_home": 41,
+          "shots_home": 13,
+          "shots_on_target_home": 6,
+          "corners_home": 4,
+          "possession_away": 58,
+          "shots_away": 16,
+          "shots_on_target_away": 5,
+          "corners_away": 6,
+          "source": "ESPN (site.api.espn.com) — 8 نونبر 2026"
+        },
+        "events": [
+          {
+            "minute": "2",
+            "team": "مارسيليا",
+            "player": "أمين غويري",
+            "type": "هدف"
+          },
+          {
+            "minute": "20",
+            "team": "لانس",
+            "player": "فلوريان توفان",
+            "type": "هدف"
+          },
+          {
+            "minute": "82",
+            "team": "مارسيليا",
+            "player": "كيليان عبد الله",
+            "type": "هدف"
+          }
+        ]
+      },
+      {
+        "id": "leeds-united-tottenham-hotspur-2026-11-07",
+        "home": "ليدز يونايتد",
+        "away": "توتنهام",
+        "league": "premier-league",
+        "league_name": "الدوري الإنجليزي الممتاز",
+        "date": "2026-11-07",
+        "source": "ESPN (site.api.espn.com) — 7 نونبر 2026",
+        "venue": "إيلاند رود، ليدز",
+        "channel": "beIN Sports",
+        "home_goals": 1,
+        "away_goals": 0,
+        "status": "finished",
+        "stats": {
+          "possession_home": 39,
+          "shots_home": 16,
+          "shots_on_target_home": 4,
+          "corners_home": 6,
+          "possession_away": 60,
+          "shots_away": 7,
+          "shots_on_target_away": 4,
+          "corners_away": 4,
+          "source": "ESPN (site.api.espn.com) — 7 نونبر 2026"
+        },
+        "events": [
+          {
+            "minute": "79",
+            "team": "ليدز يونايتد",
+            "player": "نواه أوكافور",
+            "type": "هدف"
+          }
+        ]
+      },
+      {
+        "id": "arsenal-hull-city-2026-11-07",
+        "home": "آرسنال",
+        "away": "هال سيتي",
+        "league": "premier-league",
+        "league_name": "الدوري الإنجليزي الممتاز",
+        "date": "2026-11-07",
+        "source": "ESPN (site.api.espn.com) — 7 نونبر 2026",
+        "venue": "ملعب الإمارات، لندن",
+        "channel": "beIN Sports",
+        "home_goals": 1,
+        "away_goals": 0,
+        "status": "finished",
+        "stats": {
+          "possession_home": 66,
+          "shots_home": 21,
+          "shots_on_target_home": 10,
+          "corners_home": 7,
+          "possession_away": 33,
+          "shots_away": 7,
+          "shots_on_target_away": 2,
+          "corners_away": 4,
+          "source": "ESPN (site.api.espn.com) — 7 نونبر 2026"
+        },
+        "events": [
+          {
+            "minute": "72",
+            "team": "آرسنال",
+            "player": "مارتن أوديغارد",
+            "type": "هدف"
+          }
+        ]
+      },
+      {
+        "id": "fulham-newcastle-united-2026-11-07",
+        "home": "فولهام",
+        "away": "نيوكاسل يونايتد",
+        "league": "premier-league",
+        "league_name": "الدوري الإنجليزي الممتاز",
+        "date": "2026-11-07",
+        "source": "ESPN (site.api.espn.com) — 7 نونبر 2026",
+        "venue": "كرافن كوتاج، لندن",
+        "channel": "beIN Sports",
+        "home_goals": 1,
+        "away_goals": 1,
+        "status": "finished",
+        "stats": {
+          "possession_home": 57,
+          "shots_home": 11,
+          "shots_on_target_home": 5,
+          "corners_home": 3,
+          "possession_away": 42,
+          "shots_away": 9,
+          "shots_on_target_away": 5,
+          "corners_away": 3,
+          "source": "ESPN (site.api.espn.com) — 7 نونبر 2026"
+        },
+        "events": [
+          {
+            "minute": "80",
+            "team": "نيوكاسل يونايتد",
+            "player": "جاكوب مورفي",
+            "type": "هدف"
+          },
+          {
+            "minute": "83",
+            "team": "فولهام",
+            "player": "رودريغو مونيز",
+            "type": "هدف"
+          }
+        ]
+      },
+      {
+        "id": "nottingham-forest-manchester-city-2026-11-07",
+        "home": "نوتينغهام فورست",
+        "away": "مانشستر سيتي",
+        "league": "premier-league",
+        "league_name": "الدوري الإنجليزي الممتاز",
+        "date": "2026-11-07",
+        "source": "ESPN (site.api.espn.com) — 7 نونبر 2026",
+        "venue": "سيتي غراوند، نوتنغهام",
+        "channel": "beIN Sports",
+        "home_goals": 3,
+        "away_goals": 1,
+        "status": "finished",
+        "stats": {
+          "possession_home": 22,
+          "shots_home": 11,
+          "shots_on_target_home": 5,
+          "corners_home": 3,
+          "possession_away": 78,
+          "shots_away": 12,
+          "shots_on_target_away": 4,
+          "corners_away": 7,
+          "source": "ESPN (site.api.espn.com) — 7 نونبر 2026"
+        },
+        "events": [
+          {
+            "minute": "6",
+            "team": "نوتينغهام فورست",
+            "player": "جاير كونيا",
+            "type": "هدف"
+          },
+          {
+            "minute": "18",
+            "team": "نوتينغهام فورست",
+            "player": "ليام ديلاب",
+            "type": "هدف"
+          },
+          {
+            "minute": "52",
+            "team": "مانشستر سيتي",
+            "player": "ريان شرقي",
+            "type": "هدف"
+          },
+          {
+            "minute": "73",
+            "team": "نوتينغهام فورست",
+            "player": "ليام ديلاب",
+            "type": "هدف"
+          }
+        ]
+      },
+      {
+        "id": "malaga-racing-santander-2026-11-07",
+        "home": "ملقا",
+        "away": "راسينغ سانتاندير",
+        "league": "la-liga",
+        "league_name": "الدوري الإسباني",
+        "date": "2026-11-07",
+        "source": "ESPN (site.api.espn.com) — 7 نونبر 2026",
+        "venue": "لا روزاليدا، مالقا",
+        "channel": "beIN Sports",
+        "home_goals": 1,
+        "away_goals": 2,
+        "status": "finished",
+        "stats": {
+          "possession_home": 46,
+          "shots_home": 16,
+          "shots_on_target_home": 8,
+          "corners_home": 6,
+          "possession_away": 53,
+          "shots_away": 21,
+          "shots_on_target_away": 7,
+          "corners_away": 3,
+          "source": "ESPN (site.api.espn.com) — 7 نونبر 2026"
+        },
+        "events": [
+          {
+            "minute": "28",
+            "team": "ملقا",
+            "player": "كارلوس دوتور",
+            "type": "هدف"
+          },
+          {
+            "minute": "50",
+            "team": "راسينغ سانتاندير",
+            "player": "إيكر لوكي",
+            "type": "هدف"
+          },
+          {
+            "minute": "60",
+            "team": "راسينغ سانتاندير",
+            "player": "ياسر الزبيري",
+            "type": "هدف"
+          }
+        ]
+      },
+      {
+        "id": "espanyol-deportivo-la-coruna-2026-11-07",
+        "home": "إسبانيول",
+        "away": "ديبورتيفو لاكورونيا",
+        "league": "la-liga",
+        "league_name": "الدوري الإسباني",
+        "date": "2026-11-07",
+        "source": "ESPN (site.api.espn.com) — 7 نونبر 2026",
+        "venue": "ملعب آر سي دي إي، برشلونة",
+        "channel": "beIN Sports",
+        "home_goals": 0,
+        "away_goals": 0,
+        "status": "finished",
+        "stats": {
+          "possession_home": 63,
+          "shots_home": 11,
+          "shots_on_target_home": 4,
+          "corners_home": 9,
+          "possession_away": 36,
+          "shots_away": 5,
+          "shots_on_target_away": 1,
+          "corners_away": 5,
+          "source": "ESPN (site.api.espn.com) — 7 نونبر 2026"
+        }
+      },
+      {
+        "id": "osasuna-athletic-bilbao-2026-11-07",
+        "home": "أوساسونا",
+        "away": "أتلتيك بلباو",
+        "league": "la-liga",
+        "league_name": "الدوري الإسباني",
+        "date": "2026-11-07",
+        "source": "ESPN (site.api.espn.com) — 7 نونبر 2026",
+        "venue": "إل سادار، بامبلونا",
+        "channel": "beIN Sports",
+        "home_goals": 1,
+        "away_goals": 1,
+        "status": "finished",
+        "stats": {
+          "possession_home": 39,
+          "shots_home": 17,
+          "shots_on_target_home": 5,
+          "corners_home": 6,
+          "possession_away": 60,
+          "shots_away": 16,
+          "shots_on_target_away": 4,
+          "corners_away": 4,
+          "source": "ESPN (site.api.espn.com) — 7 نونبر 2026"
+        },
+        "events": [
+          {
+            "minute": "84",
+            "team": "أتلتيك بلباو",
+            "player": "نيكو ويليامز",
+            "type": "هدف"
+          },
+          {
+            "minute": "90",
+            "team": "أوساسونا",
+            "player": "أليخاندرو كاتينا",
+            "type": "هدف"
+          }
+        ]
+      },
+      {
+        "id": "valencia-real-madrid-2026-11-07",
+        "home": "فالنسيا",
+        "away": "ريال مدريد",
+        "league": "la-liga",
+        "league_name": "الدوري الإسباني",
+        "date": "2026-11-07",
+        "source": "ESPN (site.api.espn.com) — 7 نونبر 2026",
+        "venue": "ميستايا، فالنسيا",
+        "channel": "beIN Sports",
+        "home_goals": 0,
+        "away_goals": 3,
+        "status": "finished",
+        "stats": {
+          "possession_home": 31,
+          "shots_home": 4,
+          "shots_on_target_home": 2,
+          "corners_home": 2,
+          "possession_away": 68,
+          "shots_away": 19,
+          "shots_on_target_away": 11,
+          "corners_away": 5,
+          "source": "ESPN (site.api.espn.com) — 7 نونبر 2026"
+        },
+        "events": [
+          {
+            "minute": "28",
+            "team": "ريال مدريد",
+            "player": "فيديريكو فالفيردي",
+            "type": "هدف"
+          },
+          {
+            "minute": "36",
+            "team": "ريال مدريد",
+            "player": "أردا غولر",
+            "type": "هدف"
+          },
+          {
+            "minute": "75",
+            "team": "ريال مدريد",
+            "player": "كيليان مبابي",
+            "type": "هدف"
+          }
+        ]
+      },
+      {
+        "id": "cagliari-frosinone-2026-11-07",
+        "home": "كالياري",
+        "away": "فروزينوني",
+        "league": "serie-a",
+        "league_name": "الدوري الإيطالي",
+        "date": "2026-11-07",
+        "source": "ESPN (site.api.espn.com) — 7 نونبر 2026",
+        "venue": "أونيبول دوموس، كالياري",
+        "channel": "beIN Sports",
+        "home_goals": 1,
+        "away_goals": 0,
+        "status": "finished",
+        "stats": {
+          "possession_home": 36,
+          "shots_home": 14,
+          "shots_on_target_home": 4,
+          "corners_home": 3,
+          "possession_away": 63,
+          "shots_away": 29,
+          "shots_on_target_away": 9,
+          "corners_away": 13,
+          "source": "ESPN (site.api.espn.com) — 7 نونبر 2026"
+        },
+        "events": [
+          {
+            "minute": "38",
+            "team": "كالياري",
+            "player": "ميشيل أدوبو",
+            "type": "هدف"
+          }
+        ]
+      },
+      {
+        "id": "torino-lecce-2026-11-07",
+        "home": "تورينو",
+        "away": "ليتشي",
+        "league": "serie-a",
+        "league_name": "الدوري الإيطالي",
+        "date": "2026-11-07",
+        "source": "ESPN (site.api.espn.com) — 7 نونبر 2026",
+        "venue": "الملعب الأولمبي الكبير، تورينو",
+        "channel": "beIN Sports",
+        "home_goals": 1,
+        "away_goals": 1,
+        "status": "finished",
+        "stats": {
+          "possession_home": 64,
+          "shots_home": 9,
+          "shots_on_target_home": 2,
+          "corners_home": 4,
+          "possession_away": 35,
+          "shots_away": 6,
+          "shots_on_target_away": 1,
+          "corners_away": 5,
+          "source": "ESPN (site.api.espn.com) — 7 نونبر 2026"
+        },
+        "events": [
+          {
+            "minute": "60",
+            "team": "تورينو",
+            "player": "كيالوندا غاسبار",
+            "type": "هدف"
+          },
+          {
+            "minute": "73",
+            "team": "ليتشي",
+            "player": "دانييل براغانسا",
+            "type": "هدف"
+          }
+        ]
+      },
+      {
+        "id": "parma-bologna-2026-11-07",
+        "home": "بارما",
+        "away": "بولونيا",
+        "league": "serie-a",
+        "league_name": "الدوري الإيطالي",
+        "date": "2026-11-07",
+        "source": "ESPN (site.api.espn.com) — 7 نونبر 2026",
+        "venue": "ملعب إنيو تارديني، بارما",
+        "channel": "beIN Sports",
+        "home_goals": 1,
+        "away_goals": 2,
+        "status": "finished",
+        "stats": {
+          "possession_home": 31,
+          "shots_home": 11,
+          "shots_on_target_home": 2,
+          "corners_home": 1,
+          "possession_away": 68,
+          "shots_away": 33,
+          "shots_on_target_away": 10,
+          "corners_away": 15,
+          "source": "ESPN (site.api.espn.com) — 7 نونبر 2026"
+        },
+        "events": [
+          {
+            "minute": "53",
+            "team": "بولونيا",
+            "player": "آرثر ثياتي",
+            "type": "هدف"
+          },
+          {
+            "minute": "72",
+            "team": "بولونيا",
+            "player": "ريكاردو أورسوليني",
+            "type": "هدف"
+          },
+          {
+            "minute": "81",
+            "team": "بارما",
+            "player": "فنسنت سييرو",
+            "type": "هدف"
+          }
+        ]
+      },
+      {
+        "id": "roma-sassuolo-2026-11-07",
+        "home": "روما",
+        "away": "ساسولو",
+        "league": "serie-a",
+        "league_name": "الدوري الإيطالي",
+        "date": "2026-11-07",
+        "source": "ESPN (site.api.espn.com) — 7 نونبر 2026",
+        "venue": "الملعب الأولمبي، روما",
+        "channel": "beIN Sports",
+        "home_goals": 3,
+        "away_goals": 0,
+        "status": "finished",
+        "stats": {
+          "possession_home": 65,
+          "shots_home": 28,
+          "shots_on_target_home": 9,
+          "corners_home": 12,
+          "possession_away": 34,
+          "shots_away": 6,
+          "shots_on_target_away": 1,
+          "corners_away": 1,
+          "source": "ESPN (site.api.espn.com) — 7 نونبر 2026"
+        },
+        "events": [
+          {
+            "minute": "27",
+            "team": "روما",
+            "player": "ماريو إيرموسو",
+            "type": "هدف"
+          },
+          {
+            "minute": "30",
+            "team": "روما",
+            "player": "سيباستيان والوكيفيتش",
+            "type": "هدف"
+          },
+          {
+            "minute": "58",
+            "team": "روما",
+            "player": "رودريغو مورا",
+            "type": "هدف"
+          }
+        ]
+      },
+      {
+        "id": "borussia-dortmund-elversberg-2026-11-07",
+        "home": "بوروسيا دورتموند",
+        "away": "إلفرسبرغ",
+        "league": "bundesliga",
+        "league_name": "الدوري الألماني",
+        "date": "2026-11-07",
+        "source": "ESPN (site.api.espn.com) — 7 نونبر 2026",
+        "venue": "سيغنال إيدونا بارك، دورتموند",
+        "channel": "beIN Sports",
+        "home_goals": 2,
+        "away_goals": 1,
+        "status": "finished",
+        "stats": {
+          "possession_home": 51,
+          "shots_home": 19,
+          "shots_on_target_home": 6,
+          "corners_home": 6,
+          "possession_away": 48,
+          "shots_away": 16,
+          "shots_on_target_away": 7,
+          "corners_away": 6,
+          "source": "ESPN (site.api.espn.com) — 7 نونبر 2026"
+        },
+        "events": [
+          {
+            "minute": "55",
+            "team": "بوروسيا دورتموند",
+            "player": "فيليكس نميشا",
+            "type": "هدف"
+          },
+          {
+            "minute": "71",
+            "team": "بوروسيا دورتموند",
+            "player": "فيليكس نميشا",
+            "type": "هدف"
+          },
+          {
+            "minute": "81",
+            "team": "إلفرسبرغ",
+            "player": "نويل فوتكيو",
+            "type": "هدف"
+          }
+        ]
+      },
+      {
+        "id": "mainz-bayern-munich-2026-11-07",
+        "home": "ماينز",
+        "away": "بايرن ميونيخ",
+        "league": "bundesliga",
+        "league_name": "الدوري الألماني",
+        "date": "2026-11-07",
+        "source": "ESPN (site.api.espn.com) — 7 نونبر 2026",
+        "venue": "ملعب ميوا، ماينز",
+        "channel": "beIN Sports",
+        "home_goals": 1,
+        "away_goals": 2,
+        "status": "finished",
+        "stats": {
+          "possession_home": 31,
+          "shots_home": 11,
+          "shots_on_target_home": 1,
+          "corners_home": 7,
+          "possession_away": 68,
+          "shots_away": 26,
+          "shots_on_target_away": 9,
+          "corners_away": 8,
+          "source": "ESPN (site.api.espn.com) — 7 نونبر 2026"
+        },
+        "events": [
+          {
+            "minute": "14",
+            "team": "بايرن ميونيخ",
+            "player": "جوشوا كيميش",
+            "type": "هدف"
+          },
+          {
+            "minute": "57",
+            "team": "بايرن ميونيخ",
+            "player": "لينارت كارل",
+            "type": "هدف"
+          },
+          {
+            "minute": "90+2",
+            "team": "ماينز",
+            "player": "فيليب تيتز",
+            "type": "هدف"
+          }
+        ]
+      },
+      {
+        "id": "rb-leipzig-augsburg-2026-11-07",
+        "home": "لايبزيغ",
+        "away": "أوغسبورغ",
+        "league": "bundesliga",
+        "league_name": "الدوري الألماني",
+        "date": "2026-11-07",
+        "source": "ESPN (site.api.espn.com) — 7 نونبر 2026",
+        "venue": "ريد بول أرينا، لايبزيغ",
+        "channel": "beIN Sports",
+        "home_goals": 5,
+        "away_goals": 2,
+        "status": "finished",
+        "stats": {
+          "possession_home": 64,
+          "shots_home": 17,
+          "shots_on_target_home": 7,
+          "corners_home": 2,
+          "possession_away": 35,
+          "shots_away": 13,
+          "shots_on_target_away": 8,
+          "corners_away": 2,
+          "source": "ESPN (site.api.espn.com) — 7 نونبر 2026"
+        },
+        "events": [
+          {
+            "minute": "1",
+            "team": "أوغسبورغ",
+            "player": "أنتون كادي",
+            "type": "هدف"
+          },
+          {
+            "minute": "34",
+            "team": "لايبزيغ",
+            "player": "إزيكييل بانزوزي",
+            "type": "هدف"
+          },
+          {
+            "minute": "35",
+            "team": "لايبزيغ",
+            "player": "كريستوفر نكونكو",
+            "type": "هدف"
+          },
+          {
+            "minute": "45+1",
+            "team": "لايبزيغ",
+            "player": "دافيد راوم",
+            "type": "هدف"
+          },
+          {
+            "minute": "60",
+            "team": "لايبزيغ",
+            "player": "رومولو",
+            "type": "هدف"
+          },
+          {
+            "minute": "66",
+            "team": "لايبزيغ",
+            "player": "كريستوف باومغارتنر",
+            "type": "هدف"
+          },
+          {
+            "minute": "90+2",
+            "team": "أوغسبورغ",
+            "player": "أوتشينا أوغوندو",
+            "type": "هدف"
+          }
+        ]
+      },
+      {
+        "id": "paderborn-eintracht-frankfurt-2026-11-07",
+        "home": "بادربورن",
+        "away": "آينتراخت فرانكفورت",
+        "league": "bundesliga",
+        "league_name": "الدوري الألماني",
+        "date": "2026-11-07",
+        "source": "ESPN (site.api.espn.com) — 7 نونبر 2026",
+        "venue": "ملعب هوم ديلوكس أرينا، بادربورن",
+        "channel": "beIN Sports",
+        "home_goals": 2,
+        "away_goals": 2,
+        "status": "finished",
+        "stats": {
+          "possession_home": 50,
+          "shots_home": 11,
+          "shots_on_target_home": 3,
+          "corners_home": 2,
+          "possession_away": 49,
+          "shots_away": 16,
+          "shots_on_target_away": 3,
+          "corners_away": 6,
+          "source": "ESPN (site.api.espn.com) — 7 نونبر 2026"
+        },
+        "events": [
+          {
+            "minute": "23",
+            "team": "آينتراخت فرانكفورت",
+            "player": "جوناثان بوركاردت",
+            "type": "هدف"
+          },
+          {
+            "minute": "45",
+            "team": "بادربورن",
+            "player": "رافاييل أوبرماير",
+            "type": "هدف"
+          },
+          {
+            "minute": "73",
+            "team": "بادربورن",
+            "player": "مارفين بيرينغر",
+            "type": "هدف"
+          },
+          {
+            "minute": "90+3",
+            "team": "آينتراخت فرانكفورت",
+            "player": "جوناثان بوركاردت",
+            "type": "هدف"
+          }
+        ]
+      },
+      {
+        "id": "stuttgart-werder-bremen-2026-11-07",
+        "home": "شتوتغارت",
+        "away": "فيردر بريمن",
+        "league": "bundesliga",
+        "league_name": "الدوري الألماني",
+        "date": "2026-11-07",
+        "source": "ESPN (site.api.espn.com) — 7 نونبر 2026",
+        "venue": "إم إتش بي أرينا، شتوتغارت",
+        "channel": "beIN Sports",
+        "home_goals": 1,
+        "away_goals": 0,
+        "status": "finished",
+        "stats": {
+          "possession_home": 42,
+          "shots_home": 13,
+          "shots_on_target_home": 5,
+          "corners_home": 4,
+          "possession_away": 57,
+          "shots_away": 24,
+          "shots_on_target_away": 5,
+          "corners_away": 4,
+          "source": "ESPN (site.api.espn.com) — 7 نونبر 2026"
+        },
+        "events": [
+          {
+            "minute": "7",
+            "team": "شتوتغارت",
+            "player": "ماكسيميليان ميتلشتات",
+            "type": "هدف"
+          }
+        ]
+      },
+      {
+        "id": "auxerre-paris-fc-2026-11-07",
+        "home": "أوكسير",
+        "away": "باريس إف سي",
+        "league": "ligue-1",
+        "league_name": "الدوري الفرنسي",
+        "date": "2026-11-07",
+        "source": "ESPN (site.api.espn.com) — 7 نونبر 2026",
+        "venue": "ملعب آبي ديشان، أوكسير",
+        "channel": "beIN Sports",
+        "home_goals": 0,
+        "away_goals": 1,
+        "status": "finished",
+        "stats": {
+          "possession_home": 35,
+          "shots_home": 7,
+          "shots_on_target_home": 2,
+          "corners_home": 1,
+          "possession_away": 64,
+          "shots_away": 10,
+          "shots_on_target_away": 3,
+          "corners_away": 5,
+          "source": "ESPN (site.api.espn.com) — 7 نونبر 2026"
+        },
+        "events": [
+          {
+            "minute": "63",
+            "team": "باريس إف سي",
+            "player": "لاسين سينايوكو",
+            "type": "هدف"
+          }
+        ]
+      },
+      {
+        "id": "psg-troyes-2026-11-07",
+        "home": "باريس سان جيرمان",
+        "away": "تروا",
+        "league": "ligue-1",
+        "league_name": "الدوري الفرنسي",
+        "date": "2026-11-07",
+        "source": "ESPN (site.api.espn.com) — 7 نونبر 2026",
+        "venue": "حديقة الأمراء، باريس",
+        "channel": "beIN Sports",
+        "home_goals": 1,
+        "away_goals": 0,
+        "status": "finished",
+        "stats": {
+          "possession_home": 73,
+          "shots_home": 15,
+          "shots_on_target_home": 7,
+          "corners_home": 6,
+          "possession_away": 27,
+          "shots_away": 8,
+          "shots_on_target_away": 3,
+          "corners_away": 1,
+          "source": "ESPN (site.api.espn.com) — 7 نونبر 2026"
+        },
+        "events": [
+          {
+            "minute": "39",
+            "team": "باريس سان جيرمان",
+            "player": "إيليا زابارني",
+            "type": "هدف"
+          }
+        ]
+      },
+      {
+        "id": "everton-coventry-city-2026-11-06",
+        "home": "إيفرتون",
+        "away": "كوفنتري سيتي",
+        "league": "premier-league",
+        "league_name": "الدوري الإنجليزي الممتاز",
+        "date": "2026-11-06",
+        "source": "ESPN (site.api.espn.com) — 6 نونبر 2026",
+        "venue": "ملعب هيل ديكنسون، ليفربول",
+        "channel": "beIN Sports",
+        "home_goals": 3,
+        "away_goals": 1,
+        "status": "finished",
+        "stats": {
+          "possession_home": 49,
+          "shots_home": 16,
+          "shots_on_target_home": 7,
+          "corners_home": 2,
+          "possession_away": 50,
+          "shots_away": 15,
+          "shots_on_target_away": 4,
+          "corners_away": 2,
+          "source": "ESPN (site.api.espn.com) — 6 نونبر 2026"
+        },
+        "events": [
+          {
+            "minute": "52",
+            "team": "كوفنتري سيتي",
+            "player": "يان غبوهو",
+            "type": "هدف"
+          },
+          {
+            "minute": "56",
+            "team": "إيفرتون",
+            "player": "تيرنو باري",
+            "type": "هدف"
+          },
+          {
+            "minute": "61",
+            "team": "إيفرتون",
+            "player": "تيرنو باري",
+            "type": "هدف"
+          },
+          {
+            "minute": "81",
+            "team": "إيفرتون",
+            "player": "كيران ديوزبري هال",
+            "type": "هدف"
+          }
+        ]
+      },
+      {
+        "id": "sevilla-alaves-2026-11-06",
+        "home": "إشبيلية",
+        "away": "ديبورتيفو ألافيس",
+        "league": "la-liga",
+        "league_name": "الدوري الإسباني",
+        "date": "2026-11-06",
+        "source": "ESPN (site.api.espn.com) — 6 نونبر 2026",
+        "venue": "رامون سانشيز بيزخوان، إشبيلية",
+        "channel": "beIN Sports",
+        "home_goals": 0,
+        "away_goals": 0,
+        "status": "finished",
+        "stats": {
+          "possession_home": 60,
+          "shots_home": 13,
+          "shots_on_target_home": 3,
+          "corners_home": 5,
+          "possession_away": 39,
+          "shots_away": 9,
+          "shots_on_target_away": 2,
+          "corners_away": 4,
+          "source": "ESPN (site.api.espn.com) — 6 نونبر 2026"
+        }
+      },
+      {
+        "id": "venezia-udinese-2026-11-06",
+        "home": "فينيزيا",
+        "away": "أودينيزي",
+        "league": "serie-a",
+        "league_name": "الدوري الإيطالي",
+        "date": "2026-11-06",
+        "source": "ESPN (site.api.espn.com) — 6 نونبر 2026",
+        "venue": "ملعب بيير لويجي بينزو، البندقية",
+        "channel": "beIN Sports",
+        "home_goals": 2,
+        "away_goals": 1,
+        "status": "finished",
+        "stats": {
+          "possession_home": 46,
+          "shots_home": 15,
+          "shots_on_target_home": 4,
+          "corners_home": 3,
+          "possession_away": 53,
+          "shots_away": 13,
+          "shots_on_target_away": 5,
+          "corners_away": 7,
+          "source": "ESPN (site.api.espn.com) — 6 نونبر 2026"
+        },
+        "events": [
+          {
+            "minute": "53",
+            "team": "فينيزيا",
+            "player": "توما باسيتش",
+            "type": "هدف"
+          },
+          {
+            "minute": "57",
+            "team": "أودينيزي",
+            "player": "ماتياس مورينو",
+            "type": "هدف"
+          },
+          {
+            "minute": "65",
+            "team": "فينيزيا",
+            "player": "إنريكي بيريز",
+            "type": "هدف"
+          }
+        ]
+      },
+      {
+        "id": "hamburg-borussia-monchengladbach-2026-11-06",
+        "home": "هامبورغ",
+        "away": "بوروسيا مونشنغلادباخ",
+        "league": "bundesliga",
+        "league_name": "الدوري الألماني",
+        "date": "2026-11-06",
+        "source": "ESPN (site.api.espn.com) — 6 نونبر 2026",
+        "venue": "فولكسبارك شتاديون، هامبورغ",
+        "channel": "beIN Sports",
+        "home_goals": 3,
+        "away_goals": 1,
+        "status": "finished",
+        "stats": {
+          "possession_home": 61,
+          "shots_home": 18,
+          "shots_on_target_home": 9,
+          "corners_home": 5,
+          "possession_away": 38,
+          "shots_away": 19,
+          "shots_on_target_away": 6,
+          "corners_away": 3,
+          "source": "ESPN (site.api.espn.com) — 6 نونبر 2026"
+        },
+        "events": [
+          {
+            "minute": "11",
+            "team": "هامبورغ",
+            "player": "ميرو موهايم",
+            "type": "هدف"
+          },
+          {
+            "minute": "44",
+            "team": "بوروسيا مونشنغلادباخ",
+            "player": "روبن هاك",
+            "type": "هدف"
+          },
+          {
+            "minute": "59",
+            "team": "هامبورغ",
+            "player": "شفيق ناندجا",
+            "type": "هدف"
+          },
+          {
+            "minute": "70",
+            "team": "هامبورغ",
+            "player": "ألبرت غرونبيك",
+            "type": "هدف"
+          }
+        ]
+      },
+      {
+        "id": "toulouse-strasbourg-2026-11-06",
+        "home": "تولوز",
+        "away": "ستراسبورغ",
+        "league": "ligue-1",
+        "league_name": "الدوري الفرنسي",
+        "date": "2026-11-06",
+        "source": "ESPN (site.api.espn.com) — 6 نونبر 2026",
+        "venue": "الملعب البلدي، تولوز",
+        "channel": "beIN Sports",
+        "home_goals": 3,
+        "away_goals": 1,
+        "status": "finished",
+        "stats": {
+          "possession_home": 47,
+          "shots_home": 10,
+          "shots_on_target_home": 5,
+          "corners_home": 7,
+          "possession_away": 52,
+          "shots_away": 9,
+          "shots_on_target_away": 4,
+          "corners_away": 1,
+          "source": "ESPN (site.api.espn.com) — 6 نونبر 2026"
+        },
+        "events": [
+          {
+            "minute": "45+1",
+            "team": "تولوز",
+            "player": "سانتياغو هيدالغو",
+            "type": "هدف"
+          },
+          {
+            "minute": "56",
+            "team": "تولوز",
+            "player": "مارك ماكينزي",
+            "type": "هدف"
+          },
+          {
+            "minute": "67",
+            "team": "ستراسبورغ",
+            "player": "جيوفاني ريينا",
+            "type": "هدف"
+          },
+          {
+            "minute": "76",
+            "team": "تولوز",
+            "player": "توماس يورغنسن",
+            "type": "هدف"
+          }
+        ]
       }
     ]
   }

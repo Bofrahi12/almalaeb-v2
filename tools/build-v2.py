@@ -4,11 +4,73 @@ Run: python3 tools/build-v2.py  (from inside almalaeb-v2/)
 Every number in data/ below was verified 2026-11-18 from the sources listed
 in REPORT.md. Anything unverified is an explicit placeholder, never invented.
 """
-import json, os, shutil
+import json, os, re, shutil
+from datetime import date as _date
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 V1 = os.path.expanduser("~/workspace/almalaeb")
 CHECKED = "2026-11-18"
+
+# ------------------------------------------------- تواريخ ديناميكية (للتحديث اليومي) ---
+_AR_MONTHS = ["يناير", "فبراير", "مارس", "أبريل", "مايو", "يونيو",
+              "يوليوز", "غشت", "شتنبر", "أكتوبر", "نونبر", "دجنبر"]
+_AR_WEEKDAYS = ["الاثنين", "الثلاثاء", "الأربعاء", "الخميس", "الجمعة", "السبت", "الأحد"]
+
+
+def ar_date(iso):
+    d = _date.fromisoformat(iso) if isinstance(iso, str) else iso
+    return f"{_AR_WEEKDAYS[d.weekday()]} {d.day} {_AR_MONTHS[d.month - 1]} {d.year}"
+
+
+def ar_date_short(iso):
+    d = _date.fromisoformat(iso) if isinstance(iso, str) else iso
+    return f"{d.day} {_AR_MONTHS[d.month - 1]}"
+
+
+def ar_range(d1, d2):
+    a, b = _date.fromisoformat(d1), _date.fromisoformat(d2)
+    if a.month == b.month and a.year == b.year:
+        return f"{a.day}–{b.day} {_AR_MONTHS[a.month - 1]} {a.year}"
+    return f"{a.day} {_AR_MONTHS[a.month - 1]} – {b.day} {_AR_MONTHS[b.month - 1]} {b.year}"
+
+
+# تاريخ البناء المعروض في التذييلات (يُحدَّث من data/*.json في _load_live_data)
+BUILD_DATE_AR = ar_date(CHECKED)
+# بيانات المباريات اليوم/غداً/المباشرة (من data/fixtures.json — يكتبها التحديث اليومي)
+FX_TODAY, FX_TOMORROW, FX_LIVE = [], [], []
+FX_NOTE = ""
+FX_TODAY_DATE = FX_TOMORROW_DATE = None
+
+
+def _load_live_data():
+    """يفضّل data/*.json (يكتبها tools/daily-update.py) على البيانات المضمّنة.
+    إن لم توجد الملفات أو كانت ناقصة، تبقى البيانات المضمّنة كاحتياطي."""
+    global LEAGUES, UPCOMING, RESULTS, CHECKED, BUILD_DATE_AR
+    global FX_TODAY, FX_TOMORROW, FX_LIVE, FX_NOTE, FX_TODAY_DATE, FX_TOMORROW_DATE
+    try:
+        with open(os.path.join(ROOT, "data/leagues.json"), encoding="utf-8") as f:
+            dl = json.load(f)
+        if len(dl.get("leagues", [])) == 6:
+            LEAGUES = dl["leagues"]
+            CHECKED = dl.get("updated", CHECKED)
+    except Exception:
+        pass
+    try:
+        with open(os.path.join(ROOT, "data/fixtures.json"), encoding="utf-8") as f:
+            df = json.load(f)
+        if isinstance(df.get("upcoming"), list) and isinstance(df.get("results"), list):
+            UPCOMING = df["upcoming"]
+            RESULTS = df["results"]
+            FX_TODAY = df.get("today", [])
+            FX_TOMORROW = df.get("tomorrow", [])
+            FX_LIVE = df.get("live", [])
+            FX_NOTE = df.get("note", "")
+            FX_TODAY_DATE = df.get("today_date")
+            FX_TOMORROW_DATE = df.get("tomorrow_date")
+            CHECKED = df.get("updated", CHECKED)
+    except Exception:
+        pass
+    BUILD_DATE_AR = ar_date(CHECKED)
 
 # ---------------------------------------------------------------- data ---
 # Tables: TOP 5 ONLY — verified 2026-11-18 (KickoffLens, updated 02:22 UTC,
@@ -1607,7 +1669,7 @@ MAIN_JS = r"""/* الملعب V2 — main.js: فلتر صارم: 6 دوريات 
     async leagues() {
       const d = await loadJSON("data/leagues.json");
       if (d && d.leagues) return d;
-      return { leagues: FALLBACK.leagues, updated: "نسخة احتياطية — آخر تحقق 2026-11-18" };
+      return { leagues: FALLBACK.leagues, updated: (typeof FALLBACK !== "undefined" && FALLBACK.updated) || "" };
     },
     async fixtures() {
       const d = await loadJSON("data/fixtures.json");
@@ -1756,23 +1818,52 @@ MATCHES_JS = r"""/* الملعب V2 — matches.js: تبويبات حقيقية 
     const ok = (list || []).filter(window.isAllowedLeague);
     return ok.length ? ok.map(window.matchRowHTML).join("") : null;
   }
+  /* تواريخ ديناميكية من data/fixtures.json (today_date/tomorrow_date) — بلا تواريخ مكتوبة */
+  function dayLabel(iso) {
+    if (!iso) return "";
+    return new Date(iso + "T12:00:00").toLocaleDateString("ar-MA", {weekday: "long", day: "numeric", month: "long", year: "numeric"});
+  }
+  function shortDay(iso) {
+    if (!iso) return "";
+    return new Date(iso + "T12:00:00").toLocaleDateString("ar-MA", {day: "numeric", month: "long"});
+  }
+  function nextDay() {
+    const up = (FX.upcoming || []);
+    const t = FX.tomorrow_date || "";
+    for (const m of up) { if (m.date > t) return m.date; }
+    return null;
+  }
+  function relabelTabs() {
+    document.querySelectorAll(".tabs button").forEach(btn => {
+      const t = btn.dataset.tab;
+      if (t === "today") btn.textContent = "📅 اليوم " + shortDay(FX.today_date);
+      else if (t === "tomorrow") btn.textContent = "📅 غداً " + shortDay(FX.tomorrow_date);
+      else if (t === "friday") { const nd = nextDay(); btn.textContent = nd ? "⏭️ " + dayLabel(nd) : "⏭️ القادمة"; }
+    });
+  }
   function render() {
     const box = $("matches-box");
     if (!box || !FX) return;
     let html = "";
+    const nd = nextDay();
+    const back = nd ? ` العودة ${dayLabel(nd)}.` : "";
     if (currentTab === "today") {
-      html = listHTML(FX.today) || emptyMsg("لا توجد مباريات اليوم (الأربعاء 18 نونبر 2026) في الدوريات الستة — فترة التوقف الدولي. العودة الجمعة 20 نونبر.");
+      html = listHTML(FX.today) || emptyMsg(`لا توجد مباريات اليوم (${dayLabel(FX.today_date)}) في الدوريات الستة.${back}`);
     } else if (currentTab === "tomorrow") {
-      html = listHTML(FX.tomorrow) || emptyMsg("لا توجد مباريات غداً (الخميس 19 نونبر 2026) في الدوريات الستة — التوقف الدولي مستمر. العودة الجمعة 20 نونبر.");
+      html = listHTML(FX.tomorrow) || emptyMsg(`لا توجد مباريات غداً (${dayLabel(FX.tomorrow_date)}) في الدوريات الستة.${back}`);
     } else if (currentTab === "friday") {
-      const fri = (FX.upcoming || []).filter(m => m.date === "2026-11-20");
-      html = listHTML(fri) || emptyMsg("لا توجد مباريات مبرمجة يوم الجمعة 20 نونبر.");
+      const fri = (FX.upcoming || []).filter(m => nd && m.date === nd);
+      html = listHTML(fri) || emptyMsg(nd ? `لا توجد مباريات مبرمجة يوم ${dayLabel(nd)}.` : "لا توجد مباريات قادمة مسجلة.");
     } else if (currentTab === "upcoming") {
       html = listHTML(FX.upcoming) || emptyMsg("لا توجد مباريات قادمة مسجلة.");
     } else {
       const r = FX.results || [];
       html = r.length ? listHTML(r) : emptyMsg("لا توجد نتائج مسجلة.");
-      if (r.length) html = `<p class="data-note">آخر جولة قبل التوقف الدولي (عطلة نهاية الأسبوع 7–8 نونبر 2026) — المصدر: showupandplay.com، تقرير 08 نونبر 2026. اليوم الدقيق لكل مباراة غير موثق فردياً.</p>` + html;
+      if (r.length) {
+        const dates = r.map(m => m.date).sort();
+        const range = dates[0] === dates[dates.length - 1] ? shortDay(dates[0]) : shortDay(dates[0]) + " – " + shortDay(dates[dates.length - 1]);
+        html = `<p class="data-note">آخر النتائج (${range}) — المصدر: ESPN. الأوقات بتوقيت المغرب (UTC+1).</p>` + html;
+      }
     }
     box.innerHTML = html;
   }
@@ -1780,6 +1871,7 @@ MATCHES_JS = r"""/* الملعب V2 — matches.js: تبويبات حقيقية 
     await window.loadLogos();
     FX = await window.MalaebData.fixtures();
     render();
+    relabelTabs();
     document.querySelectorAll(".tabs button").forEach(btn => {
       btn.addEventListener("click", () => {
         document.querySelectorAll(".tabs button").forEach(b => b.classList.remove("active"));
@@ -1924,13 +2016,16 @@ MATCH_JS = r"""/* الملعب V2 — match.js: صفحة تفاصيل المبا
       + statBar("الركنيات", st.corners_home, st.corners_away)
       + `<p style="color:var(--muted);font-size:.78rem;margin-top:10px">المصدر: ${esc(st.source || "—")}</p>`
     ) : `<div class="placeholder-box">الإحصائيات غير متوفرة بعد لهذه المباراة.<br>تُعرض هنا (الاستحواذ، التسديدات، الركنيات) فور توثيقها من مصدر رسمي.</div>`;
+    const eventsHTML = (m.events && m.events.length) ? m.events.map(e =>
+      `<div class="event-row"><span class="ev-min">${esc(e.minute || "")}'</span><span class="ev-type">${esc(e.type || "")}</span><b>${esc(e.player || "")}</b><span style="color:var(--muted)">${esc(e.team || "")}</span></div>`).join("")
+      : `<div class="placeholder-box">لا توجد أحداث موثقة بعد لهذه المباراة (أهداف، بطاقات، تبديلات).<br>تُضاف الأحداث بعد توثيقها من مصدر رسمي.</div>`;
     box.innerHTML = `
     <div class="scoreboard">
       <div class="teams"><span class="team-name">${window.logoFor(m.home)}${esc(m.home)}</span>
       <span class="big-score">${score}</span>
       <span class="team-name">${window.logoFor(m.away)}${esc(m.away)}</span></div>
       <div class="status">${m.league_name} • ${status}</div>
-      <div class="status" style="font-size:.8rem">المصدر: ${esc(m.source || "—")} — آخر تحقق: 18 نونبر 2026</div>
+      <div class="status" style="font-size:.8rem">المصدر: ${esc(m.source || "—")} — آخر تحقق: ${esc(fx.updated || "")}</div>
     </div>
     <div class="match-info">
       <span><span class="lbl">🏟️ الملعب:</span><b>${esc(infoVenue)}</b></span>
@@ -1945,7 +2040,7 @@ MATCH_JS = r"""/* الملعب V2 — match.js: صفحة تفاصيل المبا
       <button data-mtab="h2h">المواجهات</button>
     </div>
     <div class="mtab-panel" data-panel="events">
-      <div class="placeholder-box">لا توجد أحداث موثقة بعد لهذه المباراة (أهداف، بطاقات، تبديلات).<br>تُضاف الأحداث بعد توثيقها من مصدر رسمي.</div>
+      ${eventsHTML}
     </div>
     <div class="mtab-panel" data-panel="stats" style="display:none">${statsHTML}</div>
     <div class="mtab-panel" data-panel="lineups" style="display:none">
@@ -2006,7 +2101,7 @@ CPA_SLOT = """<div class="cpa-slot"><b>مساحة إعلانية — CPA (Placeh
 AD_LEADER = """<div class="container"><div class="ad-slot"><div class="ad-leaderboard">مساحة إعلانية — Leaderboard 970×250</div></div></div>"""
 
 def footer():
-    return """<footer class="site-footer">
+    return f"""<footer class="site-footer">
   <div class="container">
     <div class="footer-grid">
       <div>
@@ -2033,7 +2128,7 @@ def footer():
     </div>
     <div class="footer-bottom">
       <span>© <span class="js-year">2026</span> الملعب — جميع الحقوق محفوظة.</span>
-      <span>البيانات لأغراض إخبارية — آخر تحديث: 18 نونبر 2026</span>
+      <span>البيانات لأغراض إخبارية — آخر تحديث: {BUILD_DATE_AR}</span>
     </div>
   </div>
 </footer>
@@ -2090,15 +2185,82 @@ def patch(path, pairs):
     w(path, s)
 
 # ------------------------------------------------------------- build -----
+def _count_txt(n):
+    if n == 0:
+        return "لا مباريات"
+    if n == 1:
+        return "مباراة واحدة"
+    if n == 2:
+        return "مباراتان"
+    return f"{n} مباريات"
+
+
+def hero_blocks():
+    """كتلة البطل + شريط الأيام في الرئيسية — من بيانات اليوم/غداً/القادمة."""
+    today_n, tom_n = len(FX_TODAY), len(FX_TOMORROW)
+    nxt = None
+    for m in UPCOMING:
+        if m["date"] > (FX_TOMORROW_DATE or ""):
+            nxt = m["date"]
+            break
+    nxt_n = len([m for m in UPCOMING if m["date"] == nxt]) if nxt else 0
+    if today_n:
+        tag, title = "⚽ مباريات اليوم", f"مباريات اليوم: {_count_txt(today_n)} في الدوريات الستة"
+        first = "، ".join(f"{m['home']} × {m['away']}" for m in FX_TODAY[:3])
+        sub = (f"{ar_date(FX_TODAY_DATE)} — {first}." if FX_TODAY_DATE else first)
+        btn = "شاهد مباريات اليوم ←"
+    else:
+        tag, title = "⏸️ لا مباريات اليوم", "مباريات اليوم: لا مباريات في الدوريات الستة"
+        if nxt:
+            first = "، ".join(f"{m['home']} × {m['away']}" for m in [x for x in UPCOMING if x["date"] == nxt][:3])
+            sub = f"{ar_date(FX_TODAY_DATE) if FX_TODAY_DATE else ''} — العودة {ar_date(nxt)}: {first}."
+        else:
+            sub = "لا مباريات قادمة مسجلة حالياً."
+        btn = "شاهد المباريات القادمة ←"
+    hero = (f'<section class="hero" id="hero"><div class="hero-card"><div class="hero-content">\n'
+            f'    <span class="tag">{tag}</span>\n    <h1>{title}</h1>\n    <p>{sub}</p>\n'
+            f'    <a class="btn" href="matches.html">{btn}</a>\n  </div></div></section>')
+    cells = []
+    if FX_TODAY_DATE:
+        cells.append(f'<div class="day"><b>اليوم — {ar_date_short(FX_TODAY_DATE)}</b><span>{_count_txt(today_n)}</span></div>')
+    if FX_TOMORROW_DATE:
+        cells.append(f'<div class="day"><b>غداً — {ar_date_short(FX_TOMORROW_DATE)}</b><span>{_count_txt(tom_n)}</span></div>')
+    if nxt:
+        cells.append(f'<div class="day next"><b>{ar_date_short(nxt)}</b><span>{_count_txt(nxt_n)}</span></div>')
+    strip = '<div class="date-strip">\n    ' + "\n    ".join(cells) + '\n  </div>'
+    return hero, strip
+
+
+def refresh_dates():
+    """يحدّث التواريخ المجمدة ('آخر تحديث: …' / 'آخر تحقق …') في الصفحات المولّدة
+    من ملفات V1 (الترتيب، الدوريات، الأخبار…) — بلا لمس مقالات news/ (تواريخها تاريخية)."""
+    pages = ["index.html", "matches.html", "match.html", "standings.html", "news.html",
+             "about.html", "contact.html", "privacy.html"] + \
+            [f"league-{l['id']}.html" for l in LEAGUES]
+    for name in pages:
+        p = os.path.join(ROOT, name)
+        if not os.path.exists(p):
+            continue
+        with open(p, encoding="utf-8") as f:
+            s = f.read()
+        s2 = re.sub(r"آخر تحديث: (?:\S+ )?\d{1,2} \S+ \d{4}", f"آخر تحديث: {BUILD_DATE_AR}", s)
+        s2 = re.sub(r"آخر تحقق: (?:\S+ )?\d{1,2} \S+ \d{4}", f"آخر تحقق: {BUILD_DATE_AR}", s2)
+        s2 = re.sub(r"آخر تحقق (?:\S+ )?\d{1,2} \S+ \d{4}", f"آخر تحقق {BUILD_DATE_AR}", s2)
+        if s2 != s:
+            w(p, s2)
+
+
 def main():
+    _load_live_data()  # يفضّل data/*.json (يكتبها التحديث اليومي) على البيانات المضمّنة
     # ---- data files (verified only) ----
     dump(os.path.join(ROOT, "data/leagues.json"),
          {"updated": CHECKED, "leagues": LEAGUES,
-          "note": "الجداول الكاملة موثقة لكل دوري (آخر تحقق 2026-11-18). انظر tools/verified-stats-2026-11-18.json للمصادر."})
+          "note": f"الجداول الكاملة موثقة لكل دوري (آخر تحقق {ar_date(CHECKED)}). المصدر: ESPN + FRMF.ma للبطولة."})
     dump(os.path.join(ROOT, "data/fixtures.json"),
          {"updated": CHECKED,
-          "note": "18 و19 نونبر 2026: لا مباريات في الدوريات الستة (توقف دولي). العودة الجمعة 20 نونبر. الأوقات بتوقيت المغرب (UTC+1).",
-          "live": [], "today": [], "tomorrow": [],
+          "today_date": FX_TODAY_DATE, "tomorrow_date": FX_TOMORROW_DATE,
+          "note": FX_NOTE or "الأوقات بتوقيت المغرب (UTC+1).",
+          "live": FX_LIVE, "today": FX_TODAY, "tomorrow": FX_TOMORROW,
           "upcoming": UPCOMING, "results": RESULTS})
     with open(os.path.join(V1, "data/news.json"), encoding="utf-8") as f:
         news = json.load(f)
@@ -2118,20 +2280,21 @@ def main():
     w(os.path.join(ROOT, "assets/js/standings.js"), STANDINGS_JS)
     w(os.path.join(ROOT, "assets/js/home.js"), HOME_JS)
     w(os.path.join(ROOT, "assets/js/match.js"), MATCH_JS)
-    fb = {"leagues": LEAGUES,
-          "fixtures": {"live": [], "today": [], "tomorrow": [], "upcoming": UPCOMING, "results": RESULTS}}
+    fb = {"updated": CHECKED, "leagues": LEAGUES,
+          "fixtures": {"live": FX_LIVE, "today": FX_TODAY, "tomorrow": FX_TOMORROW, "upcoming": UPCOMING, "results": RESULTS}}
     w(os.path.join(ROOT, "assets/js/data-fallback.js"),
-        "/* الملعب V2 — بيانات احتياطية موثقة (18 نونبر 2026)، تُستخدم فقط إذا تعذّر تحميل data/*.json */\n"
+        f"/* الملعب V2 — بيانات احتياطية موثقة ({BUILD_DATE_AR})، تُستخدم فقط إذا تعذّر تحميل data/*.json */\n"
         "const FALLBACK = " + json.dumps(fb, ensure_ascii=False, indent=2) + ";\n")
 
     # ---- index.html (fresh) ----
+    HERO, STRIP = hero_blocks()
     index = f"""<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>الملعب | مباريات اليوم، نتائج مباشرة، ترتيب الدوريات وآخر الأخبار</title>
-<meta name="description" content="الملعب — مباريات اليوم والنتائج المباشرة، جداول ترتيب الدوري الإنجليزي والإسباني والإيطالي والألماني والفرنسي والبطولة المغربية، وآخر الأخبار بالعربية. آخر تحديث: 18 نونبر 2026.">
+<meta name="description" content="الملعب — مباريات اليوم والنتائج المباشرة، جداول ترتيب الدوري الإنجليزي والإسباني والإيطالي والألماني والفرنسي والبطولة المغربية، وآخر الأخبار بالعربية. آخر تحديث: {BUILD_DATE_AR}.">
 <meta property="og:title" content="الملعب | نتائج مباشرة وأخبار كرة القدم">
 <meta property="og:description" content="مباريات اليوم، ترتيب الدوريات الخمسة الكبرى والبطولة المغربية، وآخر الأخبار.">
 <meta property="og:type" content="website">
@@ -2146,23 +2309,14 @@ def main():
 {AD_LEADER}
 {TICKER}
 <main class="container">
-  <section class="hero" id="hero"><div class="hero-card"><div class="hero-content">
-    <span class="tag">⏸️ فترة التوقف الدولي</span>
-    <h1>مباريات اليوم: لا مباريات في الدوريات الستة</h1>
-    <p>الأربعاء 18 نونبر 2026 — الدوريات الخمسة الكبرى والبطولة المغربية في فترة التوقف الدولي. العودة يوم الجمعة 20 نونبر: بايرن ميونيخ × كولن، أتلتيك بلباو × إسبانيول، تروا × لوهافر — ثم الجولة الكاملة يوم السبت 21 نونبر، أبرزها نيوكاسل × آرسنال وليفربول × مانشستر يونايتد يوم الأحد.</p>
-    <a class="btn" href="matches.html">شاهد مباريات الجمعة والسبت ←</a>
-  </div></div></section>
+{HERO}
 
-  <div class="date-strip">
-    <div class="day"><b>اليوم — الأربعاء 18 نونبر</b><span>لا مباريات في الدوريات الستة (توقف دولي)</span></div>
-    <div class="day"><b>غداً — الخميس 19 نونبر</b><span>لا مباريات في الدوريات الستة (توقف دولي)</span></div>
-    <div class="day next"><b>الجمعة 20 نونبر</b><span>3 مباريات — عودة الدوريات</span></div>
-  </div>
+{STRIP}
 
   <section class="section">
     <div class="section-head"><h2>المباريات القادمة</h2><a class="more" href="matches.html">كل المباريات ←</a></div>
     <div class="match-list" id="home-matches"><p style="color:var(--muted)">جارٍ التحميل…</p></div>
-    <p class="data-note"><b>مصادر المباريات:</b> premierleague.com وnbcsports.com وlaligatable.co وvavel.com وfcstats.com وfootball.mib.news — آخر تحقق: 18 نونبر 2026. الأوقات بتوقيت المغرب (UTC+1).</p>
+    <p class="data-note"><b>مصادر المباريات:</b> ESPN (site.api.espn.com) للدوريات الأوروبية الخمسة + FRMF.ma للبطولة المغربية — آخر تحقق: {BUILD_DATE_AR}. الأوقات بتوقيت المغرب (UTC+1).</p>
   </section>
 
   {CPA_SLOT}
@@ -2194,7 +2348,7 @@ def main():
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>مباريات اليوم والنتائج المباشرة | الملعب</title>
-<meta name="description" content="مباريات اليوم وغداً والقادمة والنتائج من الدوريات الخمسة الكبرى والبطولة المغربية. اليوم 18 نونبر 2026: توقف دولي، والعودة الجمعة 20 نونبر — مانشستر سيتي × فولهام ونيوكاسل × آرسنال يوم السبت 21 نونبر.">
+<meta name="description" content="مباريات اليوم وغداً والقادمة والنتائج من الدوريات الخمسة الكبرى والبطولة المغربية. آخر تحديث: {BUILD_DATE_AR}.">
 <meta property="og:title" content="مباريات اليوم — نتائج مباشرة | الملعب">
 <meta property="og:locale" content="ar_MA">
 {FONTS}
@@ -2208,11 +2362,11 @@ def main():
 <main class="container">
   <section class="section">
     <div class="section-head"><h1 style="font-size:1.6rem">⚽ مباريات الدوريات الستة</h1></div>
-    <p class="data-note"><b>اليوم الأربعاء 18 نونبر 2026:</b> لا توجد مباريات في الدوري الإنجليزي والإسباني والإيطالي والألماني والفرنسي والبطولة المغربية — فترة التوقف الدولي (9–17 نونبر للدوري الإنجليزي). العودة: الجمعة 20 نونبر. الأوقات بتوقيت المغرب (UTC+1).</p>
+    <p class="data-note"><b>اليوم {ar_date(FX_TODAY_DATE) if FX_TODAY_DATE else ""}:</b> {FX_NOTE} الأوقات بتوقيت المغرب (UTC+1).</p>
     <div class="tabs">
-      <button data-tab="today" class="active">📅 اليوم 18 نونبر</button>
-      <button data-tab="tomorrow">📅 غداً 19 نونبر</button>
-      <button data-tab="friday">⏭️ الجمعة 20 نونبر</button>
+      <button data-tab="today" class="active">📅 اليوم {ar_date_short(FX_TODAY_DATE) if FX_TODAY_DATE else ""}</button>
+      <button data-tab="tomorrow">📅 غداً {ar_date_short(FX_TOMORROW_DATE) if FX_TOMORROW_DATE else ""}</button>
+      <button data-tab="friday">⏭️ القادمة</button>
       <button data-tab="upcoming">🗓️ كل القادمة</button>
       <button data-tab="results">✅ النتائج الأخيرة</button>
     </div>
@@ -2299,7 +2453,7 @@ def main():
 {TICKER}
 <main class="container page" style="max-width:1100px">
   <h1>{league_logo_img(l["id"])}{l["name"]} <small style="color:var(--muted);font-size:1rem">— موسم {l["season"]} • {l["round"]}</small></h1>
-  <p class="data-note"><span class="verified-tag">✓ موثق</span> <b>المصدر:</b> {l["source"]} — <b>آخر تحقق:</b> 18 نونبر 2026. الجدول الكامل موثق.</p>
+  <p class="data-note"><span class="verified-tag">✓ موثق</span> <b>المصدر:</b> {l["source"]} — <b>آخر تحقق:</b> {BUILD_DATE_AR}. الجدول الكامل موثق.</p>
   <section class="section" style="padding-top:6px">
     <div class="section-head"><h2>جدول الترتيب</h2><span style="color:var(--muted);font-size:.82rem">{l["next_round"]}</span></div>
     {table_html(l)}
@@ -2371,7 +2525,7 @@ def main():
            [f"news/{a['slug']}.html" for a in news["articles"]]
     sm = ['<?xml version="1.0" encoding="UTF-8"?>',
           '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'] + \
-         [f'  <url><loc>{BASE}/{u}</loc><lastmod>2026-11-18</lastmod></url>' for u in urls] + \
+         [f'  <url><loc>{BASE}/{u}</loc><lastmod>{CHECKED}</lastmod></url>' for u in urls] + \
          ['</urlset>']
     w(os.path.join(ROOT, "sitemap.xml"), "\n".join(sm) + "\n")
     w(os.path.join(ROOT, "robots.txt"),
@@ -2383,10 +2537,15 @@ def main():
     w(os.path.join(ROOT, "README.md"),
         "# الملعب V2\n\nموقع عربي ثابت (HTML/CSS/JS فقط) — الدوريات الستة فقط: الإنجليزي، الإسباني،\n"
         "الإيطالي، الألماني، الفرنسي + البطولة المغربية — 6 دوريات فقط.\n\n"
-        "- البيانات في `data/*.json` — موثقة فقط (آخر تحقق 18 نونبر 2026)، انظر `REPORT.md`.\n"
-        "- لا يوجد بوت ولا API-Football في V2 (الحساب موقوف) — التحديث اليومي يدوي أو عبر مصدر جديد.\n"
+        f"- البيانات في `data/*.json` — موثقة فقط (آخر تحقق {BUILD_DATE_AR}). المصدر: ESPN + FRMF.ma للبطولة.\\n"
+        "- التحديث اليومي: `python3 tools/daily-update.py` (انظر `tools/DAILY-README.md`).\\n"
+        "- لا يوجد API-Football في V2 (الحساب موقوف) — المصدر ESPN public API بلا مفتاح.\\n"
         "- النشر: موقع ثابت على Render — انظر `REPORT.md` (الخطوة التالية).\n"
         "- إعادة البناء: `python3 tools/build-v2.py` من داخل المجلد.\n")
+
+    # ---- تحديث التواريخ المجمدة في الصفحات المولّدة من V1 ----
+    refresh_dates()
+
 
 if __name__ == "__main__":
     main()

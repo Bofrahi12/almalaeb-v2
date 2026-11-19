@@ -39,13 +39,16 @@
       + statBar("الركنيات", st.corners_home, st.corners_away)
       + `<p style="color:var(--muted);font-size:.78rem;margin-top:10px">المصدر: ${esc(st.source || "—")}</p>`
     ) : `<div class="placeholder-box">الإحصائيات غير متوفرة بعد لهذه المباراة.<br>تُعرض هنا (الاستحواذ، التسديدات، الركنيات) فور توثيقها من مصدر رسمي.</div>`;
+    const eventsHTML = (m.events && m.events.length) ? m.events.map(e =>
+      `<div class="event-row"><span class="ev-min">${esc(e.minute || "")}'</span><span class="ev-type">${esc(e.type || "")}</span><b>${esc(e.player || "")}</b><span style="color:var(--muted)">${esc(e.team || "")}</span></div>`).join("")
+      : `<div class="placeholder-box">لا توجد أحداث موثقة بعد لهذه المباراة (أهداف، بطاقات، تبديلات).<br>تُضاف الأحداث بعد توثيقها من مصدر رسمي.</div>`;
     box.innerHTML = `
     <div class="scoreboard">
       <div class="teams"><span class="team-name">${window.logoFor(m.home)}${esc(m.home)}</span>
       <span class="big-score">${score}</span>
       <span class="team-name">${window.logoFor(m.away)}${esc(m.away)}</span></div>
       <div class="status">${m.league_name} • ${status}</div>
-      <div class="status" style="font-size:.8rem">المصدر: ${esc(m.source || "—")} — آخر تحقق: 18 نونبر 2026</div>
+      <div class="status" style="font-size:.8rem">المصدر: ${esc(m.source || "—")} — آخر تحقق: ${esc(fx.updated || "")}</div>
     </div>
     <div class="match-info">
       <span><span class="lbl">🏟️ الملعب:</span><b>${esc(infoVenue)}</b></span>
@@ -60,7 +63,7 @@
       <button data-mtab="h2h">المواجهات</button>
     </div>
     <div class="mtab-panel" data-panel="events">
-      <div class="placeholder-box">لا توجد أحداث موثقة بعد لهذه المباراة (أهداف، بطاقات، تبديلات).<br>تُضاف الأحداث بعد توثيقها من مصدر رسمي.</div>
+      ${eventsHTML}
     </div>
     <div class="mtab-panel" data-panel="stats" style="display:none">${statsHTML}</div>
     <div class="mtab-panel" data-panel="lineups" style="display:none">
