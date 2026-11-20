@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-19",
+  "updated": "2026-11-20",
   "leagues": [
     {
       "id": "premier-league",
@@ -9,7 +9,7 @@
       "season": "2026-27",
       "round": "الجولة 10",
       "next_round": "الجولة 11 — 21–23 نونبر 2026",
-      "source": "ESPN (site.api.espn.com + sports.core.api.espn.com) — الخميس 19 نونبر 2026 — الهدافون: ESPN",
+      "source": "ESPN (site.api.espn.com + sports.core.api.espn.com) — الجمعة 20 نونبر 2026 — الهدافون: ESPN",
       "table": [
         {
           "pos": 1,
@@ -314,7 +314,7 @@
       "season": "2026-27",
       "round": "الجولة 12",
       "next_round": "الجولة 13 — 20–23 نونبر 2026",
-      "source": "ESPN (site.api.espn.com + sports.core.api.espn.com) — الخميس 19 نونبر 2026 — الهدافون: ESPN",
+      "source": "ESPN (site.api.espn.com + sports.core.api.espn.com) — الجمعة 20 نونبر 2026 — الهدافون: ESPN",
       "table": [
         {
           "pos": 1,
@@ -619,7 +619,7 @@
       "season": "2026-27",
       "round": "الجولة 11",
       "next_round": "الجولة 12 — 21–23 نونبر 2026",
-      "source": "ESPN (site.api.espn.com + sports.core.api.espn.com) — الخميس 19 نونبر 2026 — الهدافون: ESPN",
+      "source": "ESPN (site.api.espn.com + sports.core.api.espn.com) — الجمعة 20 نونبر 2026 — الهدافون: ESPN",
       "table": [
         {
           "pos": 1,
@@ -924,7 +924,7 @@
       "season": "2026-27",
       "round": "الجولة 9",
       "next_round": "الجولة 10 — 20–22 نونبر 2026",
-      "source": "ESPN (site.api.espn.com + sports.core.api.espn.com) — الخميس 19 نونبر 2026 — الهدافون: ESPN",
+      "source": "ESPN (site.api.espn.com + sports.core.api.espn.com) — الجمعة 20 نونبر 2026 — الهدافون: ESPN",
       "table": [
         {
           "pos": 1,
@@ -1205,7 +1205,7 @@
       "season": "2026-27",
       "round": "الجولة 10",
       "next_round": "الجولة 11 — 20–22 نونبر 2026",
-      "source": "ESPN (site.api.espn.com + sports.core.api.espn.com) — الخميس 19 نونبر 2026 — الهدافون: ESPN",
+      "source": "ESPN (site.api.espn.com + sports.core.api.espn.com) — الجمعة 20 نونبر 2026 — الهدافون: ESPN",
       "table": [
         {
           "pos": 1,
@@ -1738,5 +1738,5 @@
       "meta": "جدول ترتيب البطولة الاحترافية المغربية 2026-27: الكوكب المراكشي متصدر بـ16 نقطة، النادي المكناسي 14، الوداد الرياضي 14 — عماد رياحي هداف البطولة بـ6 أهداف، مباريات الجولة 8 — الاستئناف الجمعة 27 نونبر 2026 (قرار LNFP)؛ مباريات الأندية الإفريقية مؤجلة أكثر والنتائج."
     }
   ],
-  "note": "الجداول الكاملة موثقة لكل دوري (آخر تحقق الخميس 19 نونبر 2026). المصدر: ESPN + FRMF.ma للبطولة."
+  "note": "الجداول الكاملة موثقة لكل دوري (آخر تحقق الجمعة 20 نونبر 2026). المصدر: ESPN + FRMF.ma للبطولة."
 }

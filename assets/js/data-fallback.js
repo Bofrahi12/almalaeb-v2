@@ -1,6 +1,6 @@
-/* الملعب V2 — بيانات احتياطية موثقة (الخميس 19 نونبر 2026)، تُستخدم فقط إذا تعذّر تحميل data/*.json */
+/* الملعب V2 — بيانات احتياطية موثقة (الجمعة 20 نونبر 2026)، تُستخدم فقط إذا تعذّر تحميل data/*.json */
 const FALLBACK = {
-  "updated": "2026-11-19",
+  "updated": "2026-11-20",
   "leagues": [
     {
       "id": "premier-league",
@@ -10,7 +10,7 @@ const FALLBACK = {
       "season": "2026-27",
       "round": "الجولة 10",
       "next_round": "الجولة 11 — 21–23 نونبر 2026",
-      "source": "ESPN (site.api.espn.com + sports.core.api.espn.com) — الخميس 19 نونبر 2026 — الهدافون: ESPN",
+      "source": "ESPN (site.api.espn.com + sports.core.api.espn.com) — الجمعة 20 نونبر 2026 — الهدافون: ESPN",
       "table": [
         {
           "pos": 1,
@@ -315,7 +315,7 @@ const FALLBACK = {
       "season": "2026-27",
       "round": "الجولة 12",
       "next_round": "الجولة 13 — 20–23 نونبر 2026",
-      "source": "ESPN (site.api.espn.com + sports.core.api.espn.com) — الخميس 19 نونبر 2026 — الهدافون: ESPN",
+      "source": "ESPN (site.api.espn.com + sports.core.api.espn.com) — الجمعة 20 نونبر 2026 — الهدافون: ESPN",
       "table": [
         {
           "pos": 1,
@@ -620,7 +620,7 @@ const FALLBACK = {
       "season": "2026-27",
       "round": "الجولة 11",
       "next_round": "الجولة 12 — 21–23 نونبر 2026",
-      "source": "ESPN (site.api.espn.com + sports.core.api.espn.com) — الخميس 19 نونبر 2026 — الهدافون: ESPN",
+      "source": "ESPN (site.api.espn.com + sports.core.api.espn.com) — الجمعة 20 نونبر 2026 — الهدافون: ESPN",
       "table": [
         {
           "pos": 1,
@@ -925,7 +925,7 @@ const FALLBACK = {
       "season": "2026-27",
       "round": "الجولة 9",
       "next_round": "الجولة 10 — 20–22 نونبر 2026",
-      "source": "ESPN (site.api.espn.com + sports.core.api.espn.com) — الخميس 19 نونبر 2026 — الهدافون: ESPN",
+      "source": "ESPN (site.api.espn.com + sports.core.api.espn.com) — الجمعة 20 نونبر 2026 — الهدافون: ESPN",
       "table": [
         {
           "pos": 1,
@@ -1206,7 +1206,7 @@ const FALLBACK = {
       "season": "2026-27",
       "round": "الجولة 10",
       "next_round": "الجولة 11 — 20–22 نونبر 2026",
-      "source": "ESPN (site.api.espn.com + sports.core.api.espn.com) — الخميس 19 نونبر 2026 — الهدافون: ESPN",
+      "source": "ESPN (site.api.espn.com + sports.core.api.espn.com) — الجمعة 20 نونبر 2026 — الهدافون: ESPN",
       "table": [
         {
           "pos": 1,
@@ -1741,8 +1741,7 @@ const FALLBACK = {
   ],
   "fixtures": {
     "live": [],
-    "today": [],
-    "tomorrow": [
+    "today": [
       {
         "id": "bayern-munich-koln-2026-11-20",
         "home": "بايرن ميونيخ",
@@ -1778,6 +1777,346 @@ const FALLBACK = {
         "date": "2026-11-20",
         "source": "ESPN (site.api.espn.com) — 20 نونبر 2026",
         "venue": "سان ماميس، بلباو",
+        "channel": "beIN Sports",
+        "time": "21:00",
+        "status": "scheduled"
+      }
+    ],
+    "tomorrow": [
+      {
+        "id": "manchester-city-fulham-2026-11-21",
+        "home": "مانشستر سيتي",
+        "away": "فولهام",
+        "league": "premier-league",
+        "league_name": "الدوري الإنجليزي الممتاز",
+        "date": "2026-11-21",
+        "source": "ESPN (site.api.espn.com) — 21 نونبر 2026",
+        "venue": "ملعب الاتحاد، مانشستر",
+        "channel": "beIN Sports",
+        "time": "13:30",
+        "status": "scheduled"
+      },
+      {
+        "id": "alaves-deportivo-la-coruna-2026-11-21",
+        "home": "ديبورتيفو ألافيس",
+        "away": "ديبورتيفو لاكورونيا",
+        "league": "la-liga",
+        "league_name": "الدوري الإسباني",
+        "date": "2026-11-21",
+        "source": "ESPN (site.api.espn.com) — 21 نونبر 2026",
+        "venue": "مينديزوروتزا، فيتوريا",
+        "channel": "beIN Sports",
+        "time": "14:00",
+        "status": "scheduled"
+      },
+      {
+        "id": "como-cagliari-2026-11-21",
+        "home": "كومو",
+        "away": "كالياري",
+        "league": "serie-a",
+        "league_name": "الدوري الإيطالي",
+        "date": "2026-11-21",
+        "source": "ESPN (site.api.espn.com) — 21 نونبر 2026",
+        "venue": "ملعب جوزيبي سينيغاليا، كومو",
+        "channel": "beIN Sports",
+        "time": "15:00",
+        "status": "scheduled"
+      },
+      {
+        "id": "lazio-lecce-2026-11-21",
+        "home": "لاتسيو",
+        "away": "ليتشي",
+        "league": "serie-a",
+        "league_name": "الدوري الإيطالي",
+        "date": "2026-11-21",
+        "source": "ESPN (site.api.espn.com) — 21 نونبر 2026",
+        "venue": "الملعب الأولمبي، روما",
+        "channel": "beIN Sports",
+        "time": "15:00",
+        "status": "scheduled"
+      },
+      {
+        "id": "union-berlin-rb-leipzig-2026-11-21",
+        "home": "يونيون برلين",
+        "away": "لايبزيغ",
+        "league": "bundesliga",
+        "league_name": "الدوري الألماني",
+        "date": "2026-11-21",
+        "source": "ESPN (site.api.espn.com) — 21 نونبر 2026",
+        "venue": "ملعب آلته فورستيري، برلين",
+        "channel": "beIN Sports",
+        "time": "15:30",
+        "status": "scheduled"
+      },
+      {
+        "id": "bayer-leverkusen-paderborn-2026-11-21",
+        "home": "باير ليفركوزن",
+        "away": "بادربورن",
+        "league": "bundesliga",
+        "league_name": "الدوري الألماني",
+        "date": "2026-11-21",
+        "source": "ESPN (site.api.espn.com) — 21 نونبر 2026",
+        "venue": "باي أرينا، ليفركوزن",
+        "channel": "beIN Sports",
+        "time": "15:30",
+        "status": "scheduled"
+      },
+      {
+        "id": "borussia-monchengladbach-borussia-dortmund-2026-11-21",
+        "home": "بوروسيا مونشنغلادباخ",
+        "away": "بوروسيا دورتموند",
+        "league": "bundesliga",
+        "league_name": "الدوري الألماني",
+        "date": "2026-11-21",
+        "source": "ESPN (site.api.espn.com) — 21 نونبر 2026",
+        "venue": "بوروسيا بارك، مونشنغلادباخ",
+        "channel": "beIN Sports",
+        "time": "15:30",
+        "status": "scheduled"
+      },
+      {
+        "id": "eintracht-frankfurt-hoffenheim-2026-11-21",
+        "home": "آينتراخت فرانكفورت",
+        "away": "هوفنهايم",
+        "league": "bundesliga",
+        "league_name": "الدوري الألماني",
+        "date": "2026-11-21",
+        "source": "ESPN (site.api.espn.com) — 21 نونبر 2026",
+        "venue": "دويتشه بنك بارك، فرانكفورت",
+        "channel": "beIN Sports",
+        "time": "15:30",
+        "status": "scheduled"
+      },
+      {
+        "id": "elversberg-freiburg-2026-11-21",
+        "home": "إلفرسبرغ",
+        "away": "فرايبورغ",
+        "league": "bundesliga",
+        "league_name": "الدوري الألماني",
+        "date": "2026-11-21",
+        "source": "ESPN (site.api.espn.com) — 21 نونبر 2026",
+        "venue": "ملعب أورسافارم أرينا، إلفرسبرغ",
+        "channel": "beIN Sports",
+        "time": "15:30",
+        "status": "scheduled"
+      },
+      {
+        "id": "bournemouth-nottingham-forest-2026-11-21",
+        "home": "بورنموث",
+        "away": "نوتينغهام فورست",
+        "league": "premier-league",
+        "league_name": "الدوري الإنجليزي الممتاز",
+        "date": "2026-11-21",
+        "source": "ESPN (site.api.espn.com) — 21 نونبر 2026",
+        "venue": "فيتاليتي ستاديوم، بورنموث",
+        "channel": "beIN Sports",
+        "time": "16:00",
+        "status": "scheduled"
+      },
+      {
+        "id": "aston-villa-sunderland-2026-11-21",
+        "home": "أستون فيلا",
+        "away": "سندرلاند",
+        "league": "premier-league",
+        "league_name": "الدوري الإنجليزي الممتاز",
+        "date": "2026-11-21",
+        "source": "ESPN (site.api.espn.com) — 21 نونبر 2026",
+        "venue": "فيلا بارك، برمنغهام",
+        "channel": "beIN Sports",
+        "time": "16:00",
+        "status": "scheduled"
+      },
+      {
+        "id": "chelsea-leeds-united-2026-11-21",
+        "home": "تشيلسي",
+        "away": "ليدز يونايتد",
+        "league": "premier-league",
+        "league_name": "الدوري الإنجليزي الممتاز",
+        "date": "2026-11-21",
+        "source": "ESPN (site.api.espn.com) — 21 نونبر 2026",
+        "venue": "ستامفورد بريدج، لندن",
+        "channel": "beIN Sports",
+        "time": "16:00",
+        "status": "scheduled"
+      },
+      {
+        "id": "coventry-city-crystal-palace-2026-11-21",
+        "home": "كوفنتري سيتي",
+        "away": "كريستال بالاس",
+        "league": "premier-league",
+        "league_name": "الدوري الإنجليزي الممتاز",
+        "date": "2026-11-21",
+        "source": "ESPN (site.api.espn.com) — 21 نونبر 2026",
+        "venue": "كوفنتري بيلدينغ سوسايتي أرينا، كوفنتري",
+        "channel": "beIN Sports",
+        "time": "16:00",
+        "status": "scheduled"
+      },
+      {
+        "id": "tottenham-hotspur-ipswich-town-2026-11-21",
+        "home": "توتنهام",
+        "away": "إيبسويتش تاون",
+        "league": "premier-league",
+        "league_name": "الدوري الإنجليزي الممتاز",
+        "date": "2026-11-21",
+        "source": "ESPN (site.api.espn.com) — 21 نونبر 2026",
+        "venue": "ملعب توتنهام هوتسبير، لندن",
+        "channel": "beIN Sports",
+        "time": "16:00",
+        "status": "scheduled"
+      },
+      {
+        "id": "rayo-vallecano-valencia-2026-11-21",
+        "home": "رايو فايكانو",
+        "away": "فالنسيا",
+        "league": "la-liga",
+        "league_name": "الدوري الإسباني",
+        "date": "2026-11-21",
+        "source": "ESPN (site.api.espn.com) — 21 نونبر 2026",
+        "venue": "ملعب فاييكاس، مدريد",
+        "channel": "beIN Sports",
+        "time": "16:15",
+        "status": "scheduled"
+      },
+      {
+        "id": "nice-psg-2026-11-21",
+        "home": "نيس",
+        "away": "باريس سان جيرمان",
+        "league": "ligue-1",
+        "league_name": "الدوري الفرنسي",
+        "date": "2026-11-21",
+        "source": "ESPN (site.api.espn.com) — 21 نونبر 2026",
+        "venue": "أليانز ريفييرا، نيس",
+        "channel": "beIN Sports",
+        "time": "17:15",
+        "status": "scheduled"
+      },
+      {
+        "id": "parma-roma-2026-11-21",
+        "home": "بارما",
+        "away": "روما",
+        "league": "serie-a",
+        "league_name": "الدوري الإيطالي",
+        "date": "2026-11-21",
+        "source": "ESPN (site.api.espn.com) — 21 نونبر 2026",
+        "venue": "ملعب إنيو تارديني، بارما",
+        "channel": "beIN Sports",
+        "time": "18:00",
+        "status": "scheduled"
+      },
+      {
+        "id": "newcastle-united-arsenal-2026-11-21",
+        "home": "نيوكاسل يونايتد",
+        "away": "آرسنال",
+        "league": "premier-league",
+        "league_name": "الدوري الإنجليزي الممتاز",
+        "date": "2026-11-21",
+        "source": "ESPN (site.api.espn.com) — 21 نونبر 2026",
+        "venue": "سانت جيمس بارك، نيوكاسل",
+        "channel": "beIN Sports",
+        "time": "18:30",
+        "status": "scheduled"
+      },
+      {
+        "id": "sevilla-real-betis-2026-11-21",
+        "home": "إشبيلية",
+        "away": "ريال بيتيس",
+        "league": "la-liga",
+        "league_name": "الدوري الإسباني",
+        "date": "2026-11-21",
+        "source": "ESPN (site.api.espn.com) — 21 نونبر 2026",
+        "venue": "رامون سانشيز بيزخوان، إشبيلية",
+        "channel": "beIN Sports",
+        "time": "18:30",
+        "status": "scheduled"
+      },
+      {
+        "id": "schalke-04-stuttgart-2026-11-21",
+        "home": "شالكه",
+        "away": "شتوتغارت",
+        "league": "bundesliga",
+        "league_name": "الدوري الألماني",
+        "date": "2026-11-21",
+        "source": "ESPN (site.api.espn.com) — 21 نونبر 2026",
+        "venue": "فيلتينس أرينا، غيلسنكيرشن",
+        "channel": "beIN Sports",
+        "time": "18:30",
+        "status": "scheduled"
+      },
+      {
+        "id": "napoli-torino-2026-11-21",
+        "home": "نابولي",
+        "away": "تورينو",
+        "league": "serie-a",
+        "league_name": "الدوري الإيطالي",
+        "date": "2026-11-21",
+        "source": "ESPN (site.api.espn.com) — 21 نونبر 2026",
+        "venue": "ملعب دييغو أرماندو مارادونا، نابولي",
+        "channel": "beIN Sports",
+        "time": "20:45",
+        "status": "scheduled"
+      },
+      {
+        "id": "monaco-auxerre-2026-11-21",
+        "home": "موناكو",
+        "away": "أوكسير",
+        "league": "ligue-1",
+        "league_name": "الدوري الفرنسي",
+        "date": "2026-11-21",
+        "source": "ESPN (site.api.espn.com) — 21 نونبر 2026",
+        "venue": "ملعب لويس الثاني، موناكو",
+        "channel": "beIN Sports",
+        "time": "20:45",
+        "status": "scheduled"
+      },
+      {
+        "id": "lens-toulouse-2026-11-21",
+        "home": "لانس",
+        "away": "تولوز",
+        "league": "ligue-1",
+        "league_name": "الدوري الفرنسي",
+        "date": "2026-11-21",
+        "source": "ESPN (site.api.espn.com) — 21 نونبر 2026",
+        "venue": "ملعب بولارت ديليليس، لنس",
+        "channel": "beIN Sports",
+        "time": "20:45",
+        "status": "scheduled"
+      },
+      {
+        "id": "lille-lyon-2026-11-21",
+        "home": "ليل",
+        "away": "ليون",
+        "league": "ligue-1",
+        "league_name": "الدوري الفرنسي",
+        "date": "2026-11-21",
+        "source": "ESPN (site.api.espn.com) — 21 نونبر 2026",
+        "venue": "ملعب بيير موروا، ليل",
+        "channel": "beIN Sports",
+        "time": "20:45",
+        "status": "scheduled"
+      },
+      {
+        "id": "strasbourg-brest-2026-11-21",
+        "home": "ستراسبورغ",
+        "away": "بريست",
+        "league": "ligue-1",
+        "league_name": "الدوري الفرنسي",
+        "date": "2026-11-21",
+        "source": "ESPN (site.api.espn.com) — 21 نونبر 2026",
+        "venue": "ملعب لامينو، ستراسبورغ",
+        "channel": "beIN Sports",
+        "time": "20:45",
+        "status": "scheduled"
+      },
+      {
+        "id": "real-madrid-celta-vigo-2026-11-21",
+        "home": "ريال مدريد",
+        "away": "سيلتا فيغو",
+        "league": "la-liga",
+        "league_name": "الدوري الإسباني",
+        "date": "2026-11-21",
+        "source": "ESPN (site.api.espn.com) — 21 نونبر 2026",
+        "venue": "سانتياغو برنابيو، مدريد",
         "channel": "beIN Sports",
         "time": "21:00",
         "status": "scheduled"
