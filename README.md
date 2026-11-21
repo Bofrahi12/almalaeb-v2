@@ -3,5 +3,5 @@
 موقع عربي ثابت (HTML/CSS/JS فقط) — الدوريات الستة فقط: الإنجليزي، الإسباني،
 الإيطالي، الألماني، الفرنسي + البطولة المغربية — 6 دوريات فقط.
 
-- البيانات في `data/*.json` — موثقة فقط (آخر تحقق الجمعة 20 نونبر 2026). المصدر: ESPN + FRMF.ma للبطولة.\n- التحديث اليومي: `python3 tools/daily-update.py` (انظر `tools/DAILY-README.md`).\n- لا يوجد API-Football في V2 (الحساب موقوف) — المصدر ESPN public API بلا مفتاح.\n- النشر: موقع ثابت على Render — انظر `REPORT.md` (الخطوة التالية).
+- البيانات في `data/*.json` — موثقة فقط (آخر تحقق السبت 21 نونبر 2026). المصدر: ESPN + FRMF.ma للبطولة.\n- التحديث اليومي: `python3 tools/daily-update.py` (انظر `tools/DAILY-README.md`).\n- لا يوجد API-Football في V2 (الحساب موقوف) — المصدر ESPN public API بلا مفتاح.\n- النشر: موقع ثابت على Render — انظر `REPORT.md` (الخطوة التالية).
 - إعادة البناء: `python3 tools/build-v2.py` من داخل المجلد.
